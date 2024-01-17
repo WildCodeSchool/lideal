@@ -1,3 +1,36 @@
-body {
-    background-color: lightgray;
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  background-color: #a306b6;
+  color: #fffbfb;
+}
+
+.pink-stripe {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  align-items: center;
+  justify-content: center;
+}
+
+.white-stripe {
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.white-stripe img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}/*# sourceMappingURL=app.css.map */
