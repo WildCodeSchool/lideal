@@ -12,7 +12,7 @@ export default function Register() {
   return (
     <>
       <div>Insciption</div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">Prénom</label>
         <input
           value={formData.firstName}
@@ -73,9 +73,7 @@ export default function Register() {
           name="dtn"
           onChange={(e) => updateUser("dtn", e.target.value)}
         />
-        <button type="submit" onClick={handleSubmit}>
-          S'inscrire
-        </button>
+        <button type="submit">S'inscrire</button>
       </form>
     </>
   );
