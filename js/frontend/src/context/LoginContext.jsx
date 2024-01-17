@@ -13,13 +13,13 @@ function LoginProvider({ children }) {
     const allUsers = getUsers();
     const checkUser = allUsers.find(
       (user) =>
-        user.username === credentials.username &&
+        user.firstName === credentials.firstName &&
         user.password === credentials.password
     );
     if (!checkUser) {
       alert("Identifiants incorrects !");
     } else {
-      alert(`Content de vous revoir ${credentials.pseudo}`);
+      alert(`Content de vous revoir ${credentials.firstName}`);
       setConnect(checkUser);
 
       return navigate("/");
