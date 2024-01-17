@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import Register from "./pages/Register";
 import App from "./App";
 
 import "mdb-react-ui-kit/dist/scss/mdb.dark.scss";
@@ -17,6 +17,12 @@ const router = createBrowserRouter([
         <App />
       </DataContextProvider>
     ),
+    children: [
+      {
+        path: "/register",
+        element: <Register />,
+      },
+    ],
   },
 ]);
 
