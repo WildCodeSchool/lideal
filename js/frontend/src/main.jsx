@@ -7,11 +7,17 @@ import App from "./App";
 
 import "mdb-react-ui-kit/dist/scss/mdb.dark.scss";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Points from "./pages/Points";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/points",
+        element: <Points />,
+      },
+    ],
   },
 ]);
 
