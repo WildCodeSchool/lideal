@@ -13,6 +13,7 @@ import LoginUser from "./pages/LoginUser";
 import DataContextProvider from "./context/DataContext";
 import LoginProvider from "./context/LoginContext";
 import { UserContextProvider } from "./context/UserContext";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       </DataContextProvider>
     ),
     children: [
+      {
+        path: "/home",
+        element: <Home />,
+      },
       {
         path: "/loginuser",
         element: (
