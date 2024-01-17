@@ -37,7 +37,7 @@ services:
     restart: unless-stopped
     tty: true
     environment:
-      DATABASE_URL: mysql://${MYSQL_USER:-root}:${MYSQL_ROOT_PASSWORD:-!ChangeMe!}@database:3306/${MYSQL_DATABASE:-bordeaux_hackaton}?serverVersion=${MYSQL_VERSION:-8.0.3}&charset=${MYSQL_CHARSET:-utf8mb4}
+      DATABASE_URL: mysql://${MYSQL_USER:-user}:${MYSQL_ROOT_PASSWORD:-password}@database:3306/${MYSQL_DATABASE:-bordeaux_hackaton}?serverVersion=${MYSQL_VERSION:-8.0.3}&charset=${MYSQL_CHARSET:-utf8mb4}
       DB_USER: ${USER_NAME:-root}
       DB_PASSWORD: ${USER_PASSWORD:-!ChangeMe!}
       DB_HOST: ${DATABASE_SUBDOMAIN_NAME:-database}
@@ -75,6 +75,8 @@ services:
     environment:
       - MYSQL_DATABASE=bordeaux_hackaton
       - MYSQL_ROOT_PASSWORD=!ChangeMe!
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
     volumes:
       - ./database-setup.sh:/docker-entrypoint-initdb.d/setup.sh
       - db_data:/var/lib/mysql
