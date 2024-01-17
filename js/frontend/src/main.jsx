@@ -11,6 +11,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import LoginUser from "./pages/LoginUser";
 
 import DataContextProvider from "./context/DataContext";
+import LoginProvider from "./context/LoginContext";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/loginuser",
-        element: <LoginUser />,
+        element: (
+          <LoginProvider>
+            <LoginUser />
+          </LoginProvider>
+        ),
       },
       {
         path: "/register",
