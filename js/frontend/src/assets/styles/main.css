@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts//HelveticaNowDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/HelveticaNowDisplay-RegIta.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/HelveticaNowDisplay-Medium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/HelveticaNowDisplay-MedIta.ttf") format("truetype");
+  font-weight: medium;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/HelveticaNowDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/HelveticaNowDisplay-BoldIta.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Helvetica";
+}
+
+body {
+  background-color: #3d3d3d;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+button {
+  display: block;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+input:focus-visible {
+  outline: none;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-left {
+  text-align: left;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-block: 25px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.tiny-text {
+  font-size: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1224px;
+  margin-inline: auto;
+  padding-inline: 12px;
+}
+
+.container-big {
+  max-width: 1200px;
+}
+
+.container-small {
+  max-width: 700px;
+}
+
+.container-max {
+  max-width: 2800px;
+}
+
+.mi-auto {
+  margin-inline: auto;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-iblock {
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-row {
+  flex-direction: row;
+}
+
+.d-flex-column {
+  flex-direction: column;
+}
+
+.d-flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex-space-around {
+  justify-content: space-around;
+}
+
+.d-flex-space-between {
+  justify-content: space-between;
+}
+
+.d-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.vw-100 {
+  width: 100vw;
+}/*# sourceMappingURL=main.css.map */
