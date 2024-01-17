@@ -12,6 +12,7 @@ import LoginUser from "./pages/LoginUser";
 
 import DataContextProvider from "./context/DataContext";
 import LoginProvider from "./context/LoginContext";
+import { UserContextProvider } from "./context/UserContext";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,9 @@ const router = createBrowserRouter([
 
     element: (
       <DataContextProvider>
-        <App />
+        <UserContextProvider>
+          <App />
+        </UserContextProvider>
       </DataContextProvider>
     ),
     children: [
