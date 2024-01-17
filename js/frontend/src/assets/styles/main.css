@@ -43,8 +43,8 @@
   font-family: "Helvetica";
 }
 
-body {
-  background-color: #3d3d3d;
+html body {
+  background-color: black;
   color: white;
 }
 
@@ -96,7 +96,22 @@ p {
   font-size: 10px;
 }
 
-.container {
+img {
+  width: 100%;
+  height: auto;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+  color: black;
+}
+
+.contain {
   width: 100%;
   max-width: 1224px;
   margin-inline: auto;
@@ -230,4 +245,28 @@ p {
 
 .vw-100 {
   width: 100vw;
+}
+
+.radius-10 {
+  border-radius: 10px;
+}
+
+.horizontal-scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding-block: 20px;
+  gap: 50px;
+  display: flex;
+}
+.horizontal-scroll .card {
+  flex: 1;
+}
+.horizontal-scroll.has-little-cards .card {
+  width: 100px;
+}
+.horizontal-scroll.has-medium-cards .card {
+  width: 200px;
+}
+.horizontal-scroll.has-big-cards .card {
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */

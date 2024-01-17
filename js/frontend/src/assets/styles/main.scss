@@ -53,8 +53,8 @@ $fonts-path: "../fonts";
   list-style: none;
   font-family: "Helvetica";
 }
-body {
-  background-color: $black;
+html body {
+  background-color: black;
   color: white;
 }
 a {
@@ -101,10 +101,25 @@ p {
 .tiny-text {
   font-size: 10px;
 }
+img {
+  width: 100%;
+  height: auto;
+}
+
+// backgrounds
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+.bg-white {
+  background-color: white;
+  color: black;
+}
 
 //// Spacing / Margins
 
-.container {
+.contain {
   width: 100%;
   max-width: 1224px;
   margin-inline: auto;
@@ -222,9 +237,44 @@ p {
 
 // borders
 
+.radius-10 {
+  border-radius: 10px;
+}
+
 // shadows
 
 // blocks
+
+.horizontal-scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding-block: 20px;
+  gap: 50px;
+  display: flex;
+
+  .card {
+    flex: 1;
+  }
+
+  &.has-little-cards {
+
+    .card {
+      width: 100px;
+    }
+  }
+  &.has-medium-cards {
+
+    .card {
+      width: 200px;
+    }
+  }
+  &.has-big-cards {
+
+    .card {
+      width: 300px;
+    }
+  }
+}
 
 // forms
 

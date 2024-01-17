@@ -1,0 +1,29 @@
+.point-container .point-part h1 {
+  padding-top: 30px;
+}
+.point-container .point-part .points {
+  width: 200px;
+  padding: 5px 10px;
+}
+.point-container .favorite-part {
+  padding-block: 20px;
+}
+.point-container .card {
+  padding: 10px;
+  gap: 5px;
+}
+.point-container .shop {
+  padding-top: 20px;
+}
+.point-container .reduc {
+  padding-top: 20px;
+}
+.point-container .reduc .line-offer {
+  gap: 40px;
+}
+.point-container .reduc .line-offer h3 {
+  align-self: center;
+}
+.point-container .reduc .line-offer img {
+  width: 80px;
+}/*# sourceMappingURL=Points.css.map */
