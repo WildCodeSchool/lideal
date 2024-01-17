@@ -7,11 +7,15 @@ import App from "./App";
 
 import "mdb-react-ui-kit/dist/scss/mdb.dark.scss";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import LoginUser from "./pages/LoginUser";
+
+import DataContextProvider from "./context/DataContext";
 
 const router = createBrowserRouter([
   {
     path: "/",
+
     element: (
       <DataContextProvider>
         <App />
