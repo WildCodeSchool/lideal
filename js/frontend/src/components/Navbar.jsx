@@ -28,7 +28,7 @@ export default function NavBar() {
             <a href="/myprofile">Profil</a>
           </li>
           <li>
-            <a href="points">Green Points</a>
+            <a href="points">Eco Points</a>
           </li>
           <li>
             <a href="/picture">Scan</a>
