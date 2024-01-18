@@ -21,7 +21,7 @@ export default function () {
             <a href="/myprofile">Profil</a>
           </li>
           <li>
-            <a href="#">Green Points</a>
+            <a href="points">Green Points</a>
           </li>
           <li>
             <a href="/picture">Scan</a>
