@@ -16,7 +16,7 @@ export default function UserContextProvider({ children, apiService }) {
       setUser(
         await apiService.post("http://localhost:3310/api/users/", formData)
       );
-      alert(`Bienvenu ${formData.firstName}, ton inscription est validée`);
+      alert(`Bienvenu ${formData.firstname}, ton inscription est validée`);
       navigate("/");
     } catch (err) {
       alert(err.message);

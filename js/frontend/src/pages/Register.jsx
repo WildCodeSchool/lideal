@@ -5,14 +5,14 @@ export default function Register() {
   const { register } = useUserContext();
 
   const [formData, setFormData] = useState({
-    c_firstname: "",
-    c_lastname: "",
-    c_address: "",
-    c_city: "",
-    c_country: "",
-    c_phone: "",
-    c_email: "",
-    c_password: "",
+    firstname: "",
+    lastname: "",
+    street: "",
+    city: "",
+    country: "",
+    phone: "",
+    email: "",
+    password: "",
   });
 
   // const handleChange = (event) => {
@@ -47,61 +47,61 @@ export default function Register() {
     <>
       <div>Insciption</div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="c_firstname">Prénom</label>
+        <label htmlFor="firstname">Prénom</label>
         <input
-          value={formData.c_firstname}
+          value={formData.firstname}
           type="text"
-          name="c_firstname"
-          onChange={(e) => updateUser("c_firstname", e.target.value)}
+          name="firstname"
+          onChange={(e) => updateUser("firstname", e.target.value)}
         />
-        <label htmlFor="c_lastname">Nom</label>
+        <label htmlFor="lastname">Nom</label>
         <input
-          value={formData.c_lastname}
+          value={formData.lastname}
           type="text"
-          name="c_lastname"
-          onChange={(e) => updateUser("c_lastname", e.target.value)}
+          name="lastname"
+          onChange={(e) => updateUser("lastname", e.target.value)}
         />
-        <label htmlFor="c_address">Adresse </label>
+        <label htmlFor="street">Adresse </label>
         <input
-          value={formData.c_address}
+          value={formData.street}
           type="text"
-          name="c_address"
-          onChange={(e) => updateUser("c_address", e.target.value)}
+          name="street"
+          onChange={(e) => updateUser("street", e.target.value)}
         />
-        <label htmlFor="c_city">Ville</label>
+        <label htmlFor="city">Ville</label>
         <input
-          value={formData.c_city}
+          value={formData.city}
           type="text"
-          name="c_city"
-          onChange={(e) => updateUser("c_city", e.target.value)}
+          name="city"
+          onChange={(e) => updateUser("city", e.target.value)}
         />
-        <label htmlFor="c_country">Pays</label>
+        <label htmlFor="country">Pays</label>
         <input
-          value={formData.c_country}
+          value={formData.country}
           type="text"
-          name="c_country"
-          onChange={(e) => updateUser("c_country", e.target.value)}
+          name="country"
+          onChange={(e) => updateUser("country", e.target.value)}
         />
-        <label htmlFor="c_phone">Téléphone</label>
+        <label htmlFor="phone">Téléphone</label>
         <input
-          value={formData.c_phone}
+          value={formData.phone}
           type="text"
-          name="c_phone"
-          onChange={(e) => updateUser("c_phone", e.target.value)}
+          name="phone"
+          onChange={(e) => updateUser("phone", e.target.value)}
         />
-        <label htmlFor="c_email">Email</label>
+        <label htmlFor="email">Email</label>
         <input
-          value={formData.c_email}
+          value={formData.email}
           type="text"
-          name="c_email"
-          onChange={(e) => updateUser("c_email", e.target.value)}
+          name="email"
+          onChange={(e) => updateUser("email", e.target.value)}
         />
-        <label htmlFor="c_password">Mot de passe</label>
+        <label htmlFor="password">Mot de passe</label>
         <input
-          value={formData.c_password}
+          value={formData.password}
           type="text"
-          name="c_password"
-          onChange={(e) => updateUser("c_password", e.target.value)}
+          name="password"
+          onChange={(e) => updateUser("password", e.target.value)}
         />
 
         <button type="submit">S'inscrire</button>

@@ -31,7 +31,7 @@ const postLogin = (req, res) => {
 const postUser = (req, res) => {
   tables.customers
     .create(req.body)
-    .then(([rows]) => {
+    .then((rows) => {
       res.send({
         id: rows.insertId,
         email: req.body.email,
