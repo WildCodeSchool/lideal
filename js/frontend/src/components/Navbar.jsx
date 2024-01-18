@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useUserContext } from "../context/UserContext";
 
@@ -15,9 +16,8 @@ export default function NavBar() {
       <button
         onClick={() => setNavbar(!navbar)}
         className={`burger-button${navbar ? " active" : ""}`}
-        type="button"
       >
-        {" "}
+        <span></span>
       </button>
       <div className="burger-menu">
         <ul>
@@ -37,10 +37,9 @@ export default function NavBar() {
             <div className="btn-nav">
               {user ? (
                 <div>
-                  {/* <p>Bienvenue</p> */}
-                  <button type="button" onClick={handleLogout}>
+                  <Link to="/" onClick={handleLogout}>
                     Se déconnecter
-                  </button>
+                  </Link>
                 </div>
               ) : (
                 <>
