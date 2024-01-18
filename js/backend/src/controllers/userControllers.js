@@ -31,7 +31,7 @@ const postLogin = (req, res) => {
 const postUser = (req, res) => {
   tables.customers
     .create(req.body)
-    .then(([rows]) => {
+    .then((rows) => {
       res.send({
         id: rows.insertId,
         email: req.body.email,
@@ -51,7 +51,7 @@ const getProfile = (req, res) => {
 const getUser = async (req, res) => {
   const id = +req.params.id;
   try {
-    const [result] = await tables.user.find(id);
+    const [result] = await tables.customers.find(id);
     if (!result.length) {
       return res.status(404).send({ error: "User not found" });
     }
