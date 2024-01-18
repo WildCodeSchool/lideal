@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+
 import Button from "../components/Button";
 import { useLogin } from "../context/LoginContext";
 
 function LoginUser() {
-  const { login } = useLogin();
-
-  const [formValue, setFormValue] = useState({
-    email: "",
-    password: "",
-  });
+  const { login, formValue, setFormValue } = useLogin();
 
   const onChange = (e) => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
