@@ -5,8 +5,9 @@
 .picture-container .picture {
   margin: 0 auto;
   width: 90%;
-  height: 80%;
+  height: 85%;
   background-color: white;
+  border-radius: 6%;
 }
 .picture-container .logo-picture {
   display: flex;
