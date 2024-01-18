@@ -52,7 +52,7 @@ class UserManager extends AbstractManager {
 
   getProfile(id) {
     return this.database.query(
-      `SELECT id, email FROM ${this.table} WHERE id = ?`,
+      `SELECT id, firstname, lastname, street, city, country, phone, email FROM ${this.table} WHERE id = ?`,
       [id]
     );
   }
