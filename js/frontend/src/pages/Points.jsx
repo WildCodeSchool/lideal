@@ -1,5 +1,4 @@
 import React from "react";
-import "./Points.scss";
 
 function Points() {
   /* const [productData, setProductData] = useState({});
@@ -97,20 +96,22 @@ function Points() {
       <div className="favorite-part bg-white border-10">
         <div className="contain">
           <h2>Mes produits favoris</h2>
-          <div className="horizontal-scroll has-little-cards line-product">
+          <ul className="horizontal-scroll has-little-cards line-product">
             {products.map((data) => (
-              <div
+              <li
                 className="card product-card d-flex d-flex-space-between d-flex-column bg-black radius-10"
                 key={data.id}
               >
-                <img src={data.img} alt="product" />
-                <div>
-                  <h4>{data.name}</h4>
-                  <h4>{data.price}</h4>
-                </div>
-              </div>
+                <a href="#">
+                  <img src={data.img} alt="product" />
+                  <figure>
+                    <h4>{data.name}</h4>
+                    <h4>{data.price}</h4>
+                  </figure>
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
       <div className="shop bg-black contain">

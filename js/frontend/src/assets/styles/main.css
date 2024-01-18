@@ -252,21 +252,43 @@ img {
 }
 
 .horizontal-scroll {
-  width: 100%;
-  overflow-x: auto;
-  padding-block: 20px;
-  gap: 50px;
   display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0;
 }
-.horizontal-scroll .card {
-  flex: 1;
+.horizontal-scroll img {
+  width: 180px;
+  height: auto;
 }
-.horizontal-scroll.has-little-cards .card {
-  width: 100px;
+
+.point-container .point-part h1 {
+  padding-top: 30px;
 }
-.horizontal-scroll.has-medium-cards .card {
+.point-container .point-part .points {
   width: 200px;
+  padding: 5px 10px;
 }
-.horizontal-scroll.has-big-cards .card {
-  width: 300px;
+.point-container .favorite-part {
+  padding-block: 20px;
+}
+.point-container .card {
+  padding: 10px;
+  gap: 5px;
+}
+.point-container .shop {
+  padding-top: 20px;
+}
+.point-container .reduc {
+  padding-top: 20px;
+}
+.point-container .reduc .line-offer {
+  gap: 40px;
+}
+.point-container .reduc .line-offer h3 {
+  align-self: center;
+}
+.point-container .reduc .line-offer img {
+  width: 80px;
 }/*# sourceMappingURL=main.css.map */
