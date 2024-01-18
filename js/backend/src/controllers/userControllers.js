@@ -45,13 +45,13 @@ const postUser = (req, res) => {
 };
 
 const getProfile = (req, res) => {
-  res.send(req.user);
+  res.send(req.customers);
 };
 
 const getUser = async (req, res) => {
   const id = +req.params.id;
   try {
-    const [result] = await tables.user.find(id);
+    const [result] = await tables.customers.find(id);
     if (!result.length) {
       return res.status(404).send({ error: "User not found" });
     }

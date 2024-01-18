@@ -43,15 +43,19 @@
   font-family: "Helvetica";
 }
 
-body {
-  background-color: #3d3d3d;
+html {
+  overflow-x: hidden;
+}
+
+html body {
+  background-color: black;
   color: white;
   overflow-x: hidden;
 }
 
 a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 button {
@@ -97,7 +101,22 @@ p {
   font-size: 10px;
 }
 
-.container {
+img {
+  width: 100%;
+  height: auto;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+  color: black;
+}
+
+.contain {
   width: 100%;
   max-width: 1224px;
   margin-inline: auto;
@@ -241,6 +260,26 @@ p {
   width: 100vw;
 }
 
+.radius {
+  border-radius: 50%;
+}
+
+.radius-10 {
+  border-radius: 10px;
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0;
+}
+.horizontal-scroll img {
+  width: 180px;
+  height: auto;
+}
+
 .navbar {
   position: relative;
   height: 50px;
@@ -309,6 +348,36 @@ p {
 }
 .navbar.active .burger-menu {
   transform: translate(0);
+}
+
+.point-container .point-part .points-container {
+  width: 250px;
+  aspect-ratio: 1/1;
+}
+.point-container .point-part .points-container h1, .point-container .point-part .points-container h2 {
+  width: 100%;
+}
+.point-container .favorite-part {
+  padding-block: 20px;
+}
+.point-container .card {
+  padding: 10px;
+  gap: 5px;
+}
+.point-container .shop {
+  padding-top: 20px;
+}
+.point-container .reduc {
+  padding-top: 20px;
+}
+.point-container .reduc .line-offer {
+  gap: 40px;
+}
+.point-container .reduc .line-offer h3 {
+  align-self: center;
+}
+.point-container .reduc .line-offer img {
+  width: 80px;
 }
 
 .inputLogin {

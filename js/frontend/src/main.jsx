@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import App from "./App";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Points from "./pages/Points";
 
 import LoginUser from "./pages/LoginUser";
 import ApiService from "./services/api.services";
@@ -21,8 +22,6 @@ const apiService = new ApiService();
 
 const router = createBrowserRouter([
   {
-    path: "/",
-
     element: (
       <DataContextProvider>
         <UserContextProvider apiService={apiService}>
@@ -52,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/picture",
         element: <Picture />,
+      },
+      {
+        path: "/points",
+        element: <Points />,
       },
     ],
   },
