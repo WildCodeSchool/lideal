@@ -1,14 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDataContext } from "../context/DataContext";
 
 export default function MyProfile() {
+  const { apiService } = useDataContext();
+  const [getProfile, setGetProfile] = useState({});
+  useEffect(() => {
+    const getUserProfile = async () => {
+      try {
+        const response = await apiService.get(
+          "http://localhost:3310/api/users/me"
+        );
+
+        setGetProfile(response.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getUserProfile();
+  }, []);
   // Récupérer les données depuis le localStorage
-  const storedUserData = JSON.parse(localStorage.getItem("users")) || [];
-  const userData = storedUserData.length > 0 ? storedUserData[0] : null;
+  // const storedUserData = JSON.parse(localStorage.getItem("users")) || [];
+  // const userData = storedUserData.length > 0 ? storedUserData[0] : null;
   const [openDiagnostic, setOpenDiagnostic] = useState(false);
 
-  if (!userData) {
-    return <div>Aucune donnée utilisateur trouvée.</div>;
-  }
+  // if (!userData) {
+  //   return <div>Aucune donnée utilisateur trouvée.</div>;
+  // }
 
   const handleClick = () => {
     setOpenDiagnostic(true);
@@ -50,23 +67,29 @@ export default function MyProfile() {
   //   };
 
   return (
-    <div>
+    <div className="bg-white">
       <h1>Mon Profil</h1>
       <div>
         <p>
-          <strong>Prénom:</strong> {userData.firstName}
+          <strong>Prénom:</strong> {getProfile.firstname}
         </p>
         <p>
-          <strong>Nom:</strong> {userData.lastName}
+          <strong>Nom:</strong> {getProfile.lastname}
         </p>
         <p>
-          <strong>Email:</strong> {userData.email}
+          <strong>Rue:</strong> {getProfile.street}
         </p>
         <p>
-          <strong>Phone:</strong> {userData.phone}
+          <strong>Ville:</strong> {getProfile.city}
         </p>
         <p>
-          <strong>Date de naissance:</strong> {userData.dtn}
+          <strong>Pays:</strong> {getProfile.country}
+        </p>
+        <p>
+          <strong>Telephone:</strong> {getProfile.phone}
+        </p>
+        <p>
+          <strong>Email:</strong> {getProfile.email}
         </p>
       </div>
       <button type="submit" onClick={handleClick}>
@@ -82,6 +105,32 @@ export default function MyProfile() {
             pour vous
           </p>
           <form action="POST">
+            <label htmlFor="colorEye">Couleur des yeux :</label>
+            <select
+              id="colorEye"
+              name="colorEye"
+              value={formData.colorEye}
+              onChange={handleSelectChange}
+            >
+              <option value="Bleu">Bleu</option>
+              <option value="Marron">Marron</option>
+              <option value="Gris">Gris</option>
+              <option value="Vert">Vert</option>
+              <option value="Noisette">Noisette</option>
+            </select>
+            <label htmlFor="colorPeau">Nuance de Peau :</label>
+            <select
+              id="colorPeau"
+              name="colorPeau"
+              value={formData.colorPeau}
+              onChange={handleSelectChange}
+            >
+              <option value="Claire">Claire</option>
+              <option value="Dorée">Dorée</option>
+              <option value="Moyenne">Moyenne</option>
+              <option value="Foncée">Foncée</option>
+              <option value="Ebène">Ebène</option>
+            </select>
             <label htmlFor="typePeau">Type de Peau :</label>
             <select
               id="typePeau"
@@ -89,37 +138,48 @@ export default function MyProfile() {
               value={formData.typePeau}
               onChange={handleSelectChange}
             >
-              <option value="normale">Normale</option>
-              <option value="seche">Sèche</option>
-              <option value="grasse">Grasse</option>
-              <option value="mixte">Mixte</option>
-              <option value="sensible">Sensible</option>
+              <option value="Mature">Mature</option>
+              <option value="Sensible">Sensible</option>
+              <option value="Acnéique">Acnéique</option>
+              <option value="Grasse">Grasse</option>
+              <option value="Sèche">Sèche</option>
             </select>
-            <label htmlFor="problemePeau">Problème de Peau :</label>
+            <label htmlFor="typeHair">Type de Cheveux :</label>
             <select
-              id="problemePeau"
-              name="problemePeau"
-              value={formData.problemePeau}
+              id="typeHair"
+              name="typeHair"
+              value={formData.typeHair}
               onChange={handleSelectChange}
             >
-              <option value="acne">Acné</option>
-              <option value="secheresse">Sécheresse</option>
-              <option value="sensibilite">Sensibilité</option>
-              <option value="rides">Rides</option>
-              <option value="autre">Autre</option>
+              <option value="Raide">Raide</option>
+              <option value="Crépus">Crépus</option>
+              <option value="Ondulés">Ondulés</option>
+              <option value="Frisés">Frisés</option>
             </select>
-            <label htmlFor="typeCheveux">Type de Cheveux :</label>
+            <label htmlFor="sizeHair">Longueur de Cheveux :</label>
             <select
-              id="typeCheveux"
-              name="typeCheveux"
-              value={formData.typeCheveux}
+              id="sizeHair"
+              name="sizeHair"
+              value={formData.sizeHair}
               onChange={handleSelectChange}
             >
-              <option value="boucles">Bouclés</option>
-              <option value="ondules">Ondulés</option>
-              <option value="raides">Raides</option>
-              <option value="crepus">Crépus</option>
-              <option value="autre">Autre</option>
+              <option value="Très court">Très court</option>
+              <option value="Court">Court</option>
+              <option value="Mi-long">Mi-long</option>
+              <option value="Long">Long</option>
+            </select>
+            <label htmlFor="colorHair">Couleur de Cheveux :</label>
+            <select
+              id="colorHair"
+              name="colorHair"
+              value={formData.colorHair}
+              onChange={handleSelectChange}
+            >
+              <option value="Roux">Roux</option>
+              <option value="Blonds">Blonds</option>
+              <option value="Bruns">Bruns</option>
+              <option value="Châtains">Châtains</option>
+              <option value="Colorés">Colorés</option>
             </select>
           </form>
         </>

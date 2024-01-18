@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./picture.scss";
 import iconePhoto from "../assets/iconePictureBlack.svg";
+import { Link } from "react-router-dom";
 
 function Picture() {
   const [camera, setCamera] = useState(false);
@@ -80,6 +81,9 @@ function Picture() {
           </div>
         )}
         <video className={showVideo ? "active" : ""} ref={videoRef} autoPlay />
+      </div>
+      <div className="btn-send">
+        <Link to="../points"><button type="button">Envoyer</button></Link>
       </div>
       <div className="logo-picture">
         {camera && (

@@ -74,6 +74,45 @@ button {
   cursor: pointer;
 }
 
+.popup-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -100;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-container.active {
+  z-index: 100;
+  opacity: 1;
+}
+.popup-container.active .popup-infos {
+  background-color: white;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+.popup-container.active .popup-infos h4 {
+  text-align: center;
+  padding-top: 40px;
+}
+.popup-container.active .popup-infos h5 {
+  text-align: center;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  align-items: center;
+}
+.popup-container.active .popup-infos button {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
 .t-center {
   text-align: center;
 }
