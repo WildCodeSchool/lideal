@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+
 import Button from "../components/Button";
 import { useLogin } from "../context/LoginContext";
 
 function LoginUser() {
-  const { login } = useLogin();
-
-  const [formValue, setFormValue] = useState({
-    firstName: "",
-    password: "",
-  });
+  const { login, formValue, setFormValue } = useLogin();
 
   const onChange = (e) => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
@@ -25,13 +20,13 @@ function LoginUser() {
       <h1>Connexion</h1>
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="firstName" className="labelLogin">
-            Prénom :
+          <label htmlFor="email" className="labelLogin">
+            Email :
           </label>
           <div className="inputLogin">
             <input
-              value={formValue.firstName}
-              name="firstName"
+              value={formValue.email}
+              name="email"
               type="text"
               id="inputLogin"
               onChange={onChange}

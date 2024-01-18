@@ -1,54 +1,36 @@
 import { createContext, useContext, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
+import ApiService from "../services/api.services";
 
 const UserContext = createContext();
 
-export default function UserContextProvider({ children }) {
+export default function UserContextProvider({ children, apiService }) {
   const navigate = useNavigate();
   const [connect, setConnect] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    password: "",
-    email: "",
-    phone: "",
-    dtn: "",
-  });
+  const givenData = useLoaderData();
+  const [user, setUser] = useState(givenData?.preloadUser?.data);
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  };
-
-  const updateUser = (field, value) => {
-    setFormData({ ...formData, [field]: value });
-  };
-
-  const saveUserToLocalStorage = () => {
-    if (!localStorage.getItem("users")) {
-      localStorage.setItem("users", JSON.stringify([]));
+  const register = async (formData) => {
+    try {
+      setUser(
+        await apiService.post("http://localhost:3310/api/users/", formData)
+      );
+      alert(`Bienvenu ${formData.firstname}, ton inscription est validée`);
+      navigate("/");
+    } catch (err) {
+      alert(err.message);
     }
-    const users = JSON.parse(localStorage.getItem("users"));
-    users.push(formData);
-    localStorage.setItem("users", JSON.stringify(users));
-    return navigate("/");
   };
 
   const contextValue = useMemo(
     () => ({
-      formData,
-      setFormData,
-      handleChange,
-      updateUser,
-      saveUserToLocalStorage,
       connect,
       setConnect,
+      register,
+      user,
     }),
-    [formData, setFormData, connect]
+    [connect]
   );
 
   return (
@@ -62,4 +44,5 @@ export const useUserContext = () => useContext(UserContext);
 
 UserContextProvider.propTypes = {
   children: PropTypes.node.isRequired,
+  apiService: PropTypes.instanceOf(ApiService).isRequired,
 };
