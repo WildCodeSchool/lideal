@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useUserContext } from "../context/UserContext";
 
 export default function () {
   const [navbar, setNavbar] = useState(false);
+  const { user, handleLogout } = useUserContext();
 
   return (
     <div className={`navbar${navbar ? " active" : ""}`}>
@@ -27,10 +30,28 @@ export default function () {
             <a href="/picture">Scan</a>
           </li>
           <li>
-            <a href="/loginuser">Connexion</a>
-          </li>
-          <li>
-            <a href="/register">Inscription</a>
+            <div className="btn-nav">
+              {user ? (
+                <div>
+                  {/* <p>Bienvenue</p> */}
+                  <button type="button" onClick={handleLogout}>
+                    Se déconnecter
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <a href="/loginuser">
+                    <span className="navbar-link">Se connecter</span>
+                  </a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/register">
+                    <span className="navbar-link">S'inscrire</span>
+                  </a>
+                </>
+              )}
+            </div>
           </li>
         </ul>
       </div>
