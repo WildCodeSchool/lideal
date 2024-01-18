@@ -1,19 +1,23 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useUserContext } from "../context/UserContext";
 
-export default function () {
+export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const { user, handleLogout } = useUserContext();
 
   return (
     <div className={`navbar${navbar ? " active" : ""}`}>
-      <img src="./src/assets/loreal-logos-idZWwLS3l4.svg" id="logo" />
+      <img
+        src="./src/assets/loreal-logos-idZWwLS3l4.svg"
+        id="logo"
+        alt="logo"
+      />
       <button
         onClick={() => setNavbar(!navbar)}
         className={`burger-button${navbar ? " active" : ""}`}
+        type="button"
       >
-        <span></span>
+        {" "}
       </button>
       <div className="burger-menu">
         <ul>
