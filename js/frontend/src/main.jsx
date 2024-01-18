@@ -22,6 +22,20 @@ const apiService = new ApiService();
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    loader: async () => {
+      if (!apiService.isAuthenticated()) {
+        return null;
+      }
+
+      try {
+        const data = await apiService.get("http://localhost:3310/api/users/me");
+        return { preloadUser: data ?? null };
+      } catch (err) {
+        console.error(err.message);
+        return null;
+      }
+    },
     element: (
       <DataContextProvider apiService={apiService}>
         <UserContextProvider>

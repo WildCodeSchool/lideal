@@ -24,11 +24,15 @@ function LoginProvider({ children }) {
       localStorage.setItem("token", data.token);
       apiService.setToken(data.token);
       const result = await apiService.get("http://localhost:3310/api/users/me");
+      alert(
+        `Content de vous revoir ${result.data.firstname} ${result.data.lastname}`
+      );
+
       setUser(result.data);
       return navigate("/");
     } catch (err) {
       console.error(err);
-      alert("Login failed. Please check your credentials.");
+      alert("Erreur de connexion. Vérifiez vos identifiants.");
     }
     return null;
   };
