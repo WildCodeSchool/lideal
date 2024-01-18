@@ -350,11 +350,47 @@ img {
   transform: translate(0);
 }
 
+.home-container .description {
+  margin: 0 30px;
+}
+.home-container .description h1 {
+  padding-top: 30px;
+}
+.home-container .description h2 {
+  padding-top: 30px;
+}
+.home-container .home-card-title {
+  display: flex;
+}
+.home-container .def {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 100%;
+  margin-top: 40px;
+}
+.home-container .def h2 {
+  padding-top: 60px;
+  text-align: center;
+}
+.home-container .def p {
+  text-align: center;
+}
+.home-container .logo-picture {
+  text-align: end;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+.home-container .logo-picture img {
+  width: 15%;
+}
+
 .point-container .point-part .points-container {
   width: 250px;
   aspect-ratio: 1/1;
 }
-.point-container .point-part .points-container h1, .point-container .point-part .points-container h2 {
+.point-container .point-part .points-container h1,
+.point-container .point-part .points-container h2 {
   width: 100%;
 }
 .point-container .favorite-part {
