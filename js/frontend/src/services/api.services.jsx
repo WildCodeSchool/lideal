@@ -35,4 +35,8 @@ export default class ApiService {
     const { data } = await axios.post(url, content, this.getConfig());
     return data;
   }
+
+  isAuthenticated() {
+    return !!this.#token;
+  }
 }

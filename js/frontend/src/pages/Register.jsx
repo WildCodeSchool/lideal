@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useUserContext } from "../context/UserContext";
 import { Link } from "react-router-dom";
+import { useUserContext } from "../context/UserContext";
 
 export default function Register() {
   const { register } = useUserContext();

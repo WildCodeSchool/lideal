@@ -17,17 +17,20 @@ export default function UserContextProvider({ children }) {
       setUser(
         await apiService.post("http://localhost:3310/api/users/", formData)
       );
-      alert(`Bienvenu ${formData.firstname}, ton inscription est validée`);
+      alert(`Bienvenue ${formData.firstname}, ton inscription est validée`);
       navigate("/");
     } catch (err) {
       alert(err.message);
     }
   };
 
-  const handlelogout = async () => {
-    await setUser(null);
-    localStorage.removeItem("token");
-    navigate("/");
+  const handleLogout = () => {
+    localStorage.setItem("token", null);
+
+    apiService.setToken(null);
+    setUser(null);
+    alert(`Déconnexion réussie`);
+    return navigate("/");
   };
 
   const contextValue = useMemo(
@@ -36,7 +39,7 @@ export default function UserContextProvider({ children }) {
       setConnect,
       register,
       user,
-      handlelogout,
+      handleLogout,
     }),
     [connect]
   );
