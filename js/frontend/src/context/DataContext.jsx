@@ -1,9 +1,10 @@
 import React, { createContext, useMemo, useContext } from "react";
 import PropTypes from "prop-types";
+import ApiService from "../services/api.services";
 
 const DataContext = createContext();
 
-function DataContextProvider({ children }) {
+function DataContextProvider({ children, apiService }) {
   const UsersArray = [
     {
       genre: "Madame",
@@ -85,14 +86,15 @@ function DataContextProvider({ children }) {
   ];
 
   const values = useMemo(
-    () => ({ UsersArray, FavProductsArray, PlacesArray }),
-    [UsersArray, FavProductsArray, PlacesArray]
+    () => ({ UsersArray, FavProductsArray, PlacesArray, apiService }),
+    [UsersArray, FavProductsArray, PlacesArray, apiService]
   );
   return <DataContext.Provider value={values}>{children}</DataContext.Provider>;
 }
 
 DataContextProvider.propTypes = {
   children: PropTypes.element.isRequired,
+  apiService: PropTypes.instanceOf(ApiService).isRequired,
 };
 
 export default DataContextProvider;

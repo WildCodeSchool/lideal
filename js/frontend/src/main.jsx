@@ -23,9 +23,9 @@ const apiService = new ApiService();
 const router = createBrowserRouter([
   {
     element: (
-      <DataContextProvider>
-        <UserContextProvider apiService={apiService}>
-          <LoginProvider apiService={apiService}>
+      <DataContextProvider apiService={apiService}>
+        <UserContextProvider>
+          <LoginProvider>
             <App />
           </LoginProvider>
         </UserContextProvider>
