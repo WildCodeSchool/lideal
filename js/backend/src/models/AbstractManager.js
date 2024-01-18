@@ -10,6 +10,20 @@ class AbstractManager {
     // Provide access to the database client
     this.database = database;
   }
+
+  find(id) {
+    return this.database.query(`select * from  ${this.table} where id = ?`, [
+      id,
+    ]);
+  }
+
+  findAll() {
+    return this.database.query(`select * from  ${this.table}`);
+  }
+
+  delete(id) {
+    return this.database.query(`delete from ${this.table} where id = ?`, [id]);
+  }
 }
 
 // Ready to export
