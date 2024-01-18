@@ -59,6 +59,7 @@ html body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 a {
   color: inherit;
@@ -126,7 +127,7 @@ img {
   width: 100%;
   max-width: 1224px;
   margin-inline: auto;
-  padding-inline: 12px;
+  padding-inline: 24px;
 }
 .container-big {
   max-width: 1200px;
@@ -192,6 +193,38 @@ img {
 }
 .mb-60 {
   margin-bottom: 60px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+.pt-30 {
+    padding-top: 30px;
+}
+.pt-40 {
+    padding-top: 40px;
+}
+.pt-50 {
+    padding-top: 50px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+.pb-20 {
+    padding-bottom: 20px;
+}
+.pb-30 {
+    padding-bottom: 30px;
+}
+.pb-40 {
+    padding-bottom: 40px;
+}
+.pb-50 {
+    padding-bottom: 50px;
 }
 
 //// Displays
@@ -325,6 +358,19 @@ img {
 
 // forms
 
+input {
+    padding: 7px 10px;
+    width: 400px;
+    max-width: 100%;
+}
+
+form {
+
+    .button {
+        padding: 0px 14px;
+    }
+}
+
 ///// Menu
 
 $navbar-height: 50px;
@@ -427,7 +473,8 @@ $burger-button-height: 20px;
 .home-container {
   .description {
     margin: 0 30px;
-
+  }
+}
 // Points
 
 .point-container {
@@ -535,16 +582,6 @@ $burger-button-height: 20px;
         line-height: 46px;
     }
 }
-
-// Login
-.inputLogin {
-  width: 60%;
-}
-.labelLogin {
-  width: 60%;
-}
-
-// Register
 
 // Profile
 

@@ -51,6 +51,7 @@ html body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 a {
@@ -120,7 +121,7 @@ img {
   width: 100%;
   max-width: 1224px;
   margin-inline: auto;
-  padding-inline: 12px;
+  padding-inline: 24px;
 }
 
 .container-big {
@@ -197,6 +198,46 @@ img {
 
 .mb-60 {
   margin-bottom: 60px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
 }
 
 .d-block {
@@ -300,10 +341,21 @@ img {
   height: auto;
 }
 
+input {
+  padding: 7px 10px;
+  width: 400px;
+  max-width: 100%;
+}
+
+form .button {
+  padding: 0px 14px;
+}
+
 .navbar {
   position: relative;
   height: 50px;
   background-color: white;
+  z-index: 100;
 }
 .navbar #logo {
   width: 130px;
@@ -374,35 +426,44 @@ img {
 .home-container .description {
   margin: 0 30px;
 }
-.home-container .description h1 {
+
+.point-container .point-part .points-container {
+  width: 250px;
+  aspect-ratio: 1/1;
+}
+.point-container .point-part .points-container h1,
+.point-container .point-part .points-container h2 {
+  width: 100%;
+}
+.point-container .point-part h1 {
   padding-top: 30px;
 }
-.home-container .description h2 {
+.point-container .point-part h2 {
   padding-top: 30px;
 }
-.home-container .home-card-title {
+.point-container .home-card-title {
   display: flex;
 }
-.home-container .def {
+.point-container .def {
   width: 300px;
   height: 300px;
   margin: 0 auto;
   border-radius: 100%;
   margin-top: 40px;
 }
-.home-container .def h2 {
+.point-container .def h2 {
   padding-top: 60px;
   text-align: center;
 }
-.home-container .def p {
+.point-container .def p {
   text-align: center;
 }
-.home-container .logo-picture {
+.point-container .logo-picture {
   text-align: end;
   padding-top: 30px;
   padding-right: 30px;
 }
-.home-container .logo-picture img {
+.point-container .logo-picture img {
   width: 15%;
 }
 
@@ -447,12 +508,4 @@ img {
   left: 0;
   font-size: 20px;
   line-height: 46px;
-}
-
-.inputLogin {
-  width: 60%;
-}
-
-.labelLogin {
-  width: 60%;
 }/*# sourceMappingURL=main.css.map */
