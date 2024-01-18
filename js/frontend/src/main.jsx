@@ -15,6 +15,7 @@ import LoginProvider from "./context/LoginContext";
 import { UserContextProvider } from "./context/UserContext";
 import Home from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
+import Picture from "./pages/Picture";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/myprofile",
         element: <MyProfile />,
+      },
+      {
+        path: "/picture",
+        element: <Picture />,
       },
     ],
   },
