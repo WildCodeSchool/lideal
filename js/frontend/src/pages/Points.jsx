@@ -23,33 +23,33 @@ function Points() {
   const products = [
     {
       id: 1,
-      name: "beaume",
+      name: "Beaume",
       img: "./src/assets/lorealproduct.jpg",
-      price: "15euros",
+      price: 15,
     },
     {
       id: 2,
-      name: "rouge",
+      name: "Rouge",
       img: "./src/assets/correcteur.jpg",
-      price: "10euros",
+      price: 10,
     },
     {
       id: 3,
-      name: "creme",
-      img: "./src/assets/creme-main.jpg",
-      price: "30euros",
+      name: "Creme",
+      img: "./src/assets/lorealproduct.jpg",
+      price: 30,
     },
     {
       id: 4,
-      name: "pipe",
+      name: "Pipe",
       img: "./src/assets/lorealproduct.jpg",
-      price: "50euros",
+      price: 50,
     },
     {
       id: 5,
-      name: "creamy",
+      name: "Creamy",
       img: "./src/assets/lorealproduct.jpg",
-      price: "30euros",
+      price: 30,
     },
   ];
 
@@ -85,7 +85,7 @@ function Points() {
     <div className="point-container bg-white">
       <div className="point-part container-max t-center">
         <div className="contain d-flex d-flex-center">
-          <div className="points-container radius bg-black d-flex d-flex-center">
+          <div className="points-container radius bg-black d-flex d-flex-center mt-30 mb-30">
             <div>
               <h1 className="mb-20">Mes points</h1>
               <h2 className="mb-20 points">100 points</h2>
@@ -93,26 +93,43 @@ function Points() {
           </div>
         </div>
       </div>
-      <div className="favorite-part bg-white border-10">
+      <div className="favorite-part bg-black border-10">
         <div className="contain">
-          <h2>Mes produits favoris</h2>
+          <h2 className="mt-10 mb-20">Mes produits favoris</h2>
           <ul className="horizontal-scroll has-little-cards line-product">
             {products.map((data) => (
               <li
-                className="card product-card d-flex d-flex-space-between d-flex-column bg-black radius-10"
+                className="card product-card bg-white radius-10"
                 key={data.id}
               >
-                <a href="#">
-                  <img src={data.img} alt="product" />
-                  <figure>
-                    <h4>{data.name}</h4>
-                    <h4>{data.price}</h4>
+                <a
+                  className="d-flex d-flex-space-between d-flex-column h-100"
+                  href="#"
+                >
+                  <img className="mb-20" src={data.img} alt="product" />
+                  <figure className="t-center mb-10">
+                    <h3>
+                      {data.name} - {data.price}€
+                    </h3>
                   </figure>
                 </a>
               </li>
             ))}
           </ul>
         </div>
+      </div>
+      <div className="contain bg-white reduc mb-30">
+        <h2 className="mt-10 mb-20">Mes offres</h2>
+        <div className="line-offer d-flex d-flex-center">
+          <img src="./src/assets/reduc.png" alt="reduc" />
+          <h3>Pour 100 Points</h3>
+        </div>
+        <button
+          className="mi-auto radius-10 pb-10 bg-black mt-30"
+          type="button"
+        >
+          Générer mon code
+        </button>
       </div>
       <div className="shop bg-black contain">
         <h2>Mes points de ventes locaux</h2>
@@ -129,19 +146,6 @@ function Points() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="bg-white reduc mb-30">
-        <h2>Mes offres</h2>
-        <div className="horizontal-scroll line-offer">
-          <img src="./src/assets/reduc.png" alt="reduc" />
-          <h3>Pour 100 Points</h3>
-        </div>
-        <button
-          className="mi-auto radius-10 pb-10 bg-black mt-30"
-          type="button"
-        >
-          Générer mon code
-        </button>
       </div>
     </div>
   );
