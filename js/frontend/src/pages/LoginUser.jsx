@@ -16,45 +16,46 @@ function LoginUser() {
   };
 
   return (
-    <div className="d-flex d-flex-column ml-3 container">
+    <div className="contain">
       <h1>Connexion</h1>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email" className="labelLogin">
+      <div className="d-flex d-flex-column d-flex-center">
+        <form onSubmit={handleSubmit} className="w-100">
+          <label htmlFor="email" className="d-block mb-10">
             Email :
           </label>
-          <div className="inputLogin">
-            <input
-              value={formValue.email}
-              name="email"
-              type="text"
-              id="inputLogin"
-              onChange={onChange}
-            />
-          </div>
-          <label htmlFor="password" className="labelLogin">
+          <input
+            value={formValue.email}
+            name="email"
+            type="text"
+            id="inputLogin"
+            onChange={onChange}
+            className="d-block mb-20"
+          />
+          <label htmlFor="password" className="d-block mb-10">
             Mot de passe :
           </label>
-          <div className="inputLogin">
-            <input
-              value={formValue.password}
-              name="password"
-              type="password"
-              id="inputLogin"
-              onChange={onChange}
-            />
-          </div>
-          <Button type="submit" className="mt-30">
+          <input
+            value={formValue.password}
+            name="password"
+            type="password"
+            id="inputLogin"
+            onChange={onChange}
+            className="d-block mb-20"
+          />
+          <Button
+            type="submit"
+            className="button bg-white radius-10 mt-30 mb-20"
+          >
             Valider
           </Button>
+          <Link to="/register">
+            <p>
+              Vous n'avez pas de compte ?<br />
+              Inscrivez-vous ici.
+            </p>
+          </Link>
         </form>
       </div>
-      <Link to="/register">
-        <p className="mt-40">
-          Vous n'avez pas de compte ?<br />
-          Inscrivez-vous ici.
-        </p>
-      </Link>
     </div>
   );
 }
