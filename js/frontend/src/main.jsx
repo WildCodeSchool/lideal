@@ -49,6 +49,10 @@ const router = createBrowserRouter([
         path: "/picture",
         element: <Picture />,
       },
+      {
+        path: "/points",
+        element: <Points />,
+      },
     ],
   },
 ]);

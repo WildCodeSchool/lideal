@@ -53,6 +53,9 @@ $fonts-path: "../fonts";
   list-style: none;
   font-family: "Helvetica";
 }
+html {
+    overflow-x: hidden;
+}
 html body {
   background-color: black;
   color: white;
@@ -245,7 +248,9 @@ img {
 // buttons
 
 // borders
-
+.radius {
+    border-radius: 50%;
+}
 .radius-10 {
   border-radius: 10px;
 }
@@ -265,6 +270,7 @@ img {
         width: 180px;
         height: auto;
     }
+
 //  width: 100%;
 //  overflow-x: auto;
 //  padding-block: 20px;
@@ -400,14 +406,14 @@ $burger-button-height: 20px;
 .point-container {
 
     .point-part {
-  
-      h1 {
-        padding-top: 30px;
-      }
-  
-      .points {
-        width: 200px;
-        padding: 5px 10px;
+      
+      .points-container {
+        width: 250px;
+        aspect-ratio: 1 / 1;
+
+        h1, h2 {
+            width: 100%;
+        }
       }
     }
   

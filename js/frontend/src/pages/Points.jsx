@@ -82,13 +82,13 @@ function Points() {
   ];
 
   return (
-    <div className="point-container">
-      <div className="point-part container-max t-center bg-black">
-        <div className="contain">
-          <div className="d-flex d-flex-center">
+    <div className="point-container bg-white">
+      <div className="point-part container-max t-center">
+        <div className="contain d-flex d-flex-center">
+          <div className="points-container radius bg-black d-flex d-flex-center">
             <div>
               <h1 className="mb-20">Mes points</h1>
-              <h2 className="bg-white radius-10 mb-20 points">100 points</h2>
+              <h2 className="mb-20 points">100 points</h2>
             </div>
           </div>
         </div>
