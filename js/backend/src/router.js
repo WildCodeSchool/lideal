@@ -17,9 +17,9 @@ router.get("/items", itemControllers.browse);
 router.get("/users", userControllers.getUsers);
 
 // Route to get a specific item by ID
+router.get("/users/me", authMiddleware, userControllers.getProfile);
 router.get("/items/:id", authMiddleware, itemControllers.read);
 router.get("/users/:id([0-9]+)", userControllers.getUser);
-router.get("/users/me", authMiddleware, userControllers.getProfile);
 
 // Route to add a new item
 router.post("/items", itemControllers.add);
