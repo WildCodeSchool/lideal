@@ -34,6 +34,19 @@
   border-radius: 8px;
   box-shadow: 1px 2px 1px rgb(156, 156, 156);
 }
+.picture-container .btn-send {
+  display: flex;
+  padding-top: 30px;
+  padding-left: 38%;
+}
+.picture-container .btn-send button {
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 1px 2px 1px rgb(156, 156, 156);
+}
 .picture-container .logo-picture {
   display: flex;
   justify-content: center;
