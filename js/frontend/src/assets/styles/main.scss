@@ -1,6 +1,5 @@
 //// Variables
 
-$black: #3d3d3d;
 $silver: #cdc4ba;
 
 //// Fonts
@@ -54,7 +53,7 @@ $fonts-path: "../fonts";
   font-family: "Helvetica";
 }
 body {
-  background-color: $black;
+  background-color: black;
   color: white;
   overflow-x: hidden;
 }
@@ -246,6 +245,7 @@ $burger-button-height: 20px;
   position: relative;
   height: $navbar-height;
   background-color: white;
+  z-index: 100;
 
   #logo {
     width: 130px;

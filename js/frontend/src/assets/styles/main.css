@@ -44,7 +44,7 @@
 }
 
 body {
-  background-color: #3d3d3d;
+  background-color: black;
   color: white;
   overflow-x: hidden;
 }
@@ -245,6 +245,7 @@ p {
   position: relative;
   height: 50px;
   background-color: white;
+  z-index: 100;
 }
 .navbar #logo {
   width: 130px;
