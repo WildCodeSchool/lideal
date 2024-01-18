@@ -58,7 +58,7 @@ function Points() {
   const shops = [
     {
       id: 1,
-      name: "Salon de coiffure Hitl'hair",
+      name: "Salon de coiffure Bon'hair",
       img: "./src/assets/coiffure.jpeg",
     },
     {
@@ -68,18 +68,18 @@ function Points() {
     },
     {
       id: 3,
-      name: "Pharma Syrie",
+      name: "Pharmacie Jules",
       img: "./src/assets/pharmacie.jpeg",
     },
     {
       id: 4,
-      name: "Aero Gros porc",
-      img: "./src/assets/lorealproduct.jpg",
+      name: "Coiffure Bel'Hair",
+      img: "./src/assets/coiffure.jpeg",
     },
     {
       id: 5,
-      name: "Parfumeriz basmati",
-      img: "./src/assets/lorealproduct.jpg",
+      name: "Manucure Cathy",
+      img: "./src/assets/manucure.jpeg",
     },
   ];
 

@@ -155,6 +155,9 @@ img {
   height: auto;
 }
 
+hr {
+    border: 1px solid black;
+}
 // backgrounds
 
 .bg-black {
@@ -172,7 +175,7 @@ img {
   width: 100%;
   max-width: 1224px;
   margin-inline: auto;
-  padding-inline: 12px;
+  padding-inline: 24px;
 }
 .container-big {
   max-width: 1200px;
@@ -183,6 +186,7 @@ img {
 .container-max {
   max-width: 2800px;
 }
+
 
 // slider
 
@@ -202,6 +206,9 @@ img {
   margin-left: 30px;
 }
 
+.mt-bk {
+    margin-top: -4px;
+}
 .mt-10 {
   margin-top: 10px;
 }
@@ -238,6 +245,38 @@ img {
 }
 .mb-60 {
   margin-bottom: 60px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+.pt-30 {
+    padding-top: 30px;
+}
+.pt-40 {
+    padding-top: 40px;
+}
+.pt-50 {
+    padding-top: 50px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+.pb-20 {
+    padding-bottom: 20px;
+}
+.pb-30 {
+    padding-bottom: 30px;
+}
+.pb-40 {
+    padding-bottom: 40px;
+}
+.pb-50 {
+    padding-bottom: 50px;
 }
 
 //// Displays
@@ -290,6 +329,25 @@ img {
   width: 100vw;
 }
 
+// lists 
+
+ol, ul {
+    padding-inline: 25px 10px;
+}
+
+.point-list {
+
+    li {
+
+        &:before {
+            content: "•";
+            display: inline-block;
+            margin-right: 6px;
+            vertical-align: text-bottom;
+        }
+    }
+}
+
 // buttons
 
 .button {
@@ -321,6 +379,17 @@ img {
 }
 .radius-10 {
   border-radius: 10px;
+}
+
+// video 
+
+.video-max {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    video {
+        width: 100%;
+    }
 }
 
 // shadows
@@ -370,6 +439,19 @@ img {
 }
 
 // forms
+
+input {
+    padding: 7px 10px;
+    width: 400px;
+    max-width: 100%;
+}
+
+form {
+
+    .button {
+        padding: 0px 14px;
+    }
+}
 
 ///// Menu
 
@@ -475,6 +557,12 @@ $burger-button-height: 20px;
     margin: 0 30px;
   }
 }
+
+.home-title {
+    font-size: 35px;
+    margin: 0;
+}
+
 // Points
 
 .point-container {
@@ -487,12 +575,6 @@ $burger-button-height: 20px;
       h2 {
         width: 100%;
       }
-    }
-    h1 {
-      padding-top: 30px;
-    }
-    h2 {
-      padding-top: 30px;
     }
   }
   .home-card-title {
@@ -514,16 +596,19 @@ $burger-button-height: 20px;
       text-align: center;
     }
   }
-  .logo-picture {
-    text-align: end;
-    padding-top: 30px;
-    padding-right: 30px;
+}
 
+
+.logo-picture {
+
+    div {
+        padding: 10px;
+    }
     img {
-      width: 15%;
+        filter: invert(100%);
+        width: 40px;
     }
   }
-}
 
 // Points
 
@@ -583,21 +668,21 @@ $burger-button-height: 20px;
   }
 }
 
-// Login
-.inputLogin {
-  width: 60%;
-}
-.labelLogin {
-  width: 60%;
-}
-
-// Register
-
 // Profile
 
 // GP
 
 // Picture
+
+.has-three-children {
+    display: flex;
+
+    & > * {
+        width: 33.3333%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
 
 //// Responsive
 

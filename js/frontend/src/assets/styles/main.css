@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Helvetica";
   src: url("../fonts//HelveticaNowDisplay-Regular.ttf") format("truetype");
@@ -146,6 +147,10 @@ img {
   height: auto;
 }
 
+hr {
+  border: 1px solid black;
+}
+
 .bg-black {
   background-color: black;
   color: white;
@@ -160,7 +165,7 @@ img {
   width: 100%;
   max-width: 1224px;
   margin-inline: auto;
-  padding-inline: 12px;
+  padding-inline: 24px;
 }
 
 .container-big {
@@ -189,6 +194,10 @@ img {
 
 .ml-3 {
   margin-left: 30px;
+}
+
+.mt-bk {
+  margin-top: -4px;
 }
 
 .mt-10 {
@@ -237,6 +246,46 @@ img {
 
 .mb-60 {
   margin-bottom: 60px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
 }
 
 .d-block {
@@ -300,6 +349,17 @@ img {
   width: 100vw;
 }
 
+ol, ul {
+  padding-inline: 25px 10px;
+}
+
+.point-list li:before {
+  content: "•";
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: text-bottom;
+}
+
 .button {
   padding: 10px 15px;
   transition: all 0.3s;
@@ -328,6 +388,14 @@ img {
   border-radius: 10px;
 }
 
+.video-max {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.video-max video {
+  width: 100%;
+}
+
 .horizontal-scroll {
   display: flex;
   overflow-x: auto;
@@ -338,6 +406,16 @@ img {
 .horizontal-scroll img {
   width: 180px;
   height: auto;
+}
+
+input {
+  padding: 7px 10px;
+  width: 400px;
+  max-width: 100%;
+}
+
+form .button {
+  padding: 0px 14px;
 }
 
 .navbar {
@@ -416,6 +494,11 @@ img {
   margin: 0 30px;
 }
 
+.home-title {
+  font-size: 35px;
+  margin: 0;
+}
+
 .point-container .point-part .points-container {
   width: 250px;
   aspect-ratio: 1/1;
@@ -423,12 +506,6 @@ img {
 .point-container .point-part .points-container h1,
 .point-container .point-part .points-container h2 {
   width: 100%;
-}
-.point-container .point-part h1 {
-  padding-top: 30px;
-}
-.point-container .point-part h2 {
-  padding-top: 30px;
 }
 .point-container .home-card-title {
   display: flex;
@@ -447,13 +524,13 @@ img {
 .point-container .def p {
   text-align: center;
 }
-.point-container .logo-picture {
-  text-align: end;
-  padding-top: 30px;
-  padding-right: 30px;
+
+.logo-picture div {
+  padding: 10px;
 }
-.point-container .logo-picture img {
-  width: 15%;
+.logo-picture img {
+  filter: invert(100%);
+  width: 40px;
 }
 
 .point-container .point-part .points-container {
@@ -499,10 +576,13 @@ img {
   line-height: 46px;
 }
 
-.inputLogin {
-  width: 60%;
+.has-three-children {
+  display: flex;
 }
-
-.labelLogin {
-  width: 60%;
+.has-three-children > * {
+  width: 33.3333%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=main.css.map */
