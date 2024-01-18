@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 function Points() {
-  /* const [productData, setProductData] = useState({});
+  const [productData, setProductData] = useState({});
 
   useEffect(() => {
     const fetchDataProduct = async () => {
       try {
-        const response = await fetch("http://localhost:3310/api/structure");
+        const response = await fetch("http://localhost:3310/api/products");
         if (!response.ok) {
           throw new Error("Erreur lors de la récupération des données");
         }
@@ -19,11 +18,11 @@ function Points() {
     };
 
     fetchDataProduct();
-  }, []); */
+  }, []);
 
   const [showPopup, setShowPopup] = useState(false);
 
-  const products = [
+  /* const products = [
     {
       id: 1,
       name: "Beaume",
@@ -54,7 +53,7 @@ function Points() {
       img: "./src/assets/lorealproduct.jpg",
       price: 30,
     },
-  ];
+  ]; */
 
   const shops = [
     {
@@ -100,10 +99,10 @@ function Points() {
         <div className="contain">
           <h2 className="mt-10 mb-20">Mes produits favoris</h2>
           <ul className="horizontal-scroll line-product">
-            {products.map((data) => (
+            {productData.map((data) => (
               <li
                 className="card product-card bg-white radius-10"
-                key={data.id}
+                key={data.product_id}
               >
                 <a
                   className="d-flex d-flex-space-between d-flex-column h-100"
@@ -112,7 +111,7 @@ function Points() {
                   <img className="mb-20" src={data.img} alt="product" />
                   <figure className="t-center mb-10">
                     <h3>
-                      {data.name} - {data.price}€
+                      {data.product_name} - {data.price}€
                     </h3>
                   </figure>
                 </a>
