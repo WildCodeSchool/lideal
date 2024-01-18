@@ -45,7 +45,7 @@ const postUser = (req, res) => {
 };
 
 const getProfile = (req, res) => {
-  res.send(req.user);
+  res.send(req.customers);
 };
 
 const getUser = async (req, res) => {

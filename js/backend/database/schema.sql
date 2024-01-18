@@ -12,7 +12,7 @@ CREATE TABLE
         id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         firstname VARCHAR(100) NOT NULL,
         lastname VARCHAR(100) NOT NULL,
-        address VARCHAR(155) NOT NULL,
+        street VARCHAR(155) NOT NULL,
         city VARCHAR(100) NOT NULL,
         country VARCHAR(155) NOT NULL,
         phone VARCHAR(100) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE
 INSERT INTO customers (
     firstname,
     lastname,
-    address,
+    street,
     city,
     country,
     phone,

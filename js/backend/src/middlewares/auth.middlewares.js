@@ -13,12 +13,12 @@ const authMiddleware = (req, res, next) => {
       if (err) {
         return res.status(401).json({ error: err.message });
       } // Step 3: get user data from token payload
-      tables.user.getProfile(data.id).then(([rows]) => {
+      tables.customers.getProfile(data.id).then(([rows]) => {
         if (!rows.length) {
           return res.status(401).json({ error: "Utilisateur inexistant" });
         } // Step 4: share user data between different middlewares// eslint-disable-next-line prefer-destructuring
         // eslint-disable-next-line prefer-destructuring
-        req.user = rows[0];
+        req.customers = rows[0];
         return next();
       });
       return null;

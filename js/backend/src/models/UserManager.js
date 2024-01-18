@@ -9,11 +9,11 @@ class UserManager extends AbstractManager {
   create(user) {
     return UserManager.hashPassword(user.password).then(async (hash) => {
       const [rows] = await this.database.query(
-        `INSERT INTO ${this.table} (firstname, lastname, address, city, country, phone, email, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        `INSERT INTO ${this.table} (firstname, lastname, street, city, country, phone, email, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           user.firstname,
           user.lastname,
-          user.address,
+          user.street,
           user.city,
           user.country,
           user.phone,
