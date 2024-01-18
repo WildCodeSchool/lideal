@@ -1,7 +1,7 @@
-CREATE DATABASE lideal_db;
+CREATE DATABASE lideal;
 
 -- Sélectionner la base de données
-USE lideal_db;
+USE lideal;
 
 DROP TABLE IF EXISTS customers;
 -- Créer la table "customers"

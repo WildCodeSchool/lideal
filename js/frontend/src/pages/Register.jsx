@@ -5,12 +5,14 @@ export default function Register() {
   const { register } = useUserContext();
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    password: "",
-    email: "",
-    phone: "",
-    dtn: "",
+    c_firstname: "",
+    c_lastname: "",
+    c_address: "",
+    c_city: "",
+    c_country: "",
+    c_phone: "",
+    c_email: "",
+    c_password: "",
   });
 
   // const handleChange = (event) => {
@@ -45,66 +47,63 @@ export default function Register() {
     <>
       <div>Insciption</div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">Prénom</label>
+        <label htmlFor="c_firstname">Prénom</label>
         <input
-          value={formData.firstName}
+          value={formData.c_firstname}
           type="text"
-          name="firstName"
-          onChange={(e) => updateUser("firstName", e.target.value)}
+          name="c_firstname"
+          onChange={(e) => updateUser("c_firstname", e.target.value)}
         />
-        <label htmlFor="lastName">Nom</label>
+        <label htmlFor="c_lastname">Nom</label>
         <input
-          value={formData.lastName}
+          value={formData.c_lastname}
           type="text"
-          name="lastName"
-          onChange={(e) => updateUser("lastName", e.target.value)}
+          name="c_lastname"
+          onChange={(e) => updateUser("c_lastname", e.target.value)}
         />
-        <label htmlFor="password">Mot de passe</label>
+        <label htmlFor="c_address">Adresse </label>
         <input
-          value={formData.password}
+          value={formData.c_address}
           type="text"
-          name="password"
-          onChange={(e) => updateUser("password", e.target.value)}
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          name="c_address"
+          onChange={(e) => updateUser("c_address", e.target.value)}
         />
-        <label htmlFor="password">Confirmation mot de passe</label>
+        <label htmlFor="c_city">Ville</label>
         <input
-          value={formData.password}
+          value={formData.c_city}
           type="text"
-          name="password"
-          onChange={(e) => updateUser("passeword", e.target.value)}
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          name="c_city"
+          onChange={(e) => updateUser("c_city", e.target.value)}
         />
-        <label htmlFor="email">Email</label>
+        <label htmlFor="c_country">Pays</label>
         <input
-          value={formData.email}
+          value={formData.c_country}
           type="text"
-          name="email"
-          onChange={(e) => updateUser("email", e.target.value)}
-          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          name="c_country"
+          onChange={(e) => updateUser("c_country", e.target.value)}
         />
-        <label htmlFor="email">Confirmation Email</label>
+        <label htmlFor="c_phone">Téléphone</label>
         <input
-          value={formData.email}
+          value={formData.c_phone}
           type="text"
-          name="email"
-          onChange={(e) => updateUser("email", e.target.value)}
-          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          name="c_phone"
+          onChange={(e) => updateUser("c_phone", e.target.value)}
         />
-        <label htmlFor="phone">Numéro de téléphone</label>
+        <label htmlFor="c_email">Email</label>
         <input
-          value={formData.phone}
-          type="tel"
-          name="phone"
-          onChange={(e) => updateUser("phone", e.target.value)}
+          value={formData.c_email}
+          type="text"
+          name="c_email"
+          onChange={(e) => updateUser("c_email", e.target.value)}
         />
-        <label htmlFor="dtn">Date de naissance</label>
+        <label htmlFor="c_password">Mot de passe</label>
         <input
-          value={formData.dtn}
-          type="date"
-          name="dtn"
-          onChange={(e) => updateUser("dtn", e.target.value)}
+          value={formData.c_password}
+          type="text"
+          name="c_password"
+          onChange={(e) => updateUser("c_password", e.target.value)}
         />
+
         <button type="submit">S'inscrire</button>
       </form>
     </>

@@ -25,7 +25,7 @@ function LoginProvider({ children, apiService }) {
 
       const result = await apiService.get("/api/users/me");
 
-      alert(`Coucou ${result.data.email}`);
+      alert(`Coucou ${result.data.c_email}`);
       setUser(result.data);
       return navigate("/");
     } catch (err) {

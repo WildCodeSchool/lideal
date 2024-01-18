@@ -7,8 +7,8 @@ function LoginUser() {
   const { login } = useLogin();
 
   const [formValue, setFormValue] = useState({
-    email: "",
-    password: "",
+    c_email: "",
+    c_password: "",
   });
 
   const onChange = (e) => {
@@ -25,25 +25,25 @@ function LoginUser() {
       <h1>Connexion</h1>
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email" className="labelLogin">
+          <label htmlFor="c_email" className="labelLogin">
             Email :
           </label>
           <div className="inputLogin">
             <input
-              value={formValue.firstName}
-              name="email"
+              value={formValue.c_email}
+              name="c_email"
               type="text"
               id="inputLogin"
               onChange={onChange}
             />
           </div>
-          <label htmlFor="password" className="labelLogin">
+          <label htmlFor="c_password" className="labelLogin">
             Mot de passe :
           </label>
           <div className="inputLogin">
             <input
-              value={formValue.password}
-              name="password"
+              value={formValue.c_password}
+              name="c_password"
               type="password"
               id="inputLogin"
               onChange={onChange}

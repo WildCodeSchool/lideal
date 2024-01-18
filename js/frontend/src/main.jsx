@@ -8,6 +8,7 @@ import App from "./App";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import LoginUser from "./pages/LoginUser";
+import ApiService from "./services/api.services";
 
 import DataContextProvider from "./context/DataContext";
 import LoginProvider from "./context/LoginContext";
@@ -16,14 +17,16 @@ import Home from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
 import Picture from "./pages/Picture";
 
+const apiService = new ApiService();
+
 const router = createBrowserRouter([
   {
     path: "/",
 
     element: (
       <DataContextProvider>
-        <UserContextProvider>
-          <LoginProvider>
+        <UserContextProvider apiService={apiService}>
+          <LoginProvider apiService={apiService}>
             <App />
           </LoginProvider>
         </UserContextProvider>
