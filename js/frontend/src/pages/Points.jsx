@@ -96,7 +96,7 @@ function Points() {
       <div className="favorite-part bg-black border-10">
         <div className="contain">
           <h2 className="mt-10 mb-20">Mes produits favoris</h2>
-          <ul className="horizontal-scroll has-little-cards line-product">
+          <ul className="horizontal-scroll line-product">
             {products.map((data) => (
               <li
                 className="card product-card bg-white radius-10"
@@ -120,20 +120,37 @@ function Points() {
       </div>
       <div className="contain bg-white reduc mb-30">
         <h2 className="mt-10 mb-20">Mes offres</h2>
-        <div className="line-offer d-flex d-flex-center">
-          <img src="./src/assets/reduc.png" alt="reduc" />
+        <div className="line-offer d-flex d-flex-center mb-20">
+          <figure className="promo promo-10">
+            <img src="./src/assets/reduc.png" alt="reduc" />
+            <figcaption className="w-100 h-100 t-center">-5%</figcaption>
+          </figure>
           <h3>Pour 100 Points</h3>
         </div>
+        <div className="line-offer d-flex d-flex-center mb-20">
+          <figure className="promo promo-10">
+            <img src="./src/assets/reduc.png" alt="reduc" />
+            <figcaption className="w-100 h-100 t-center">-10%</figcaption>
+          </figure>
+          <h3>Pour 200 Points</h3>
+        </div>
+        <div className="line-offer d-flex d-flex-center mb-20">
+          <figure className="promo promo-10">
+            <img src="./src/assets/reduc.png" alt="reduc" />
+            <figcaption className="w-100 h-100 t-center">-15%</figcaption>
+          </figure>
+          <h3>Pour 300 Points</h3>
+        </div>
         <button
-          className="mi-auto radius-10 pb-10 bg-black mt-30"
+          className="button mi-auto radius-10 pb-10 bg-black mt-30"
           type="button"
         >
           Générer mon code
         </button>
       </div>
-      <div className="shop bg-black contain">
-        <h2>Mes points de ventes locaux</h2>
-        <div className="horizontal-scroll has-big-cards line-product mt-20 mb-20">
+      <div className="shop bg-black contain mb-40">
+        <h2 className="mt-10 mb-20">Mes points de ventes locaux</h2>
+        <div className="horizontal-scroll line-product mt-20">
           {shops.map((data) => (
             <div
               className="card shop-card d-flex d-flex-space-between d-flex-column bg-white radius-10"
@@ -141,7 +158,7 @@ function Points() {
             >
               <img src={data.img} alt="product" />
               <div>
-                <h4>{data.name}</h4>
+                <h3>{data.name}</h3>
               </div>
             </div>
           ))}
