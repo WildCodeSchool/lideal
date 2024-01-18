@@ -1,33 +1,41 @@
-import { createContext, useContext, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useState,
+} from "react";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
+import ApiService from "../services/api.services";
 
 const loginContext = createContext();
 
-function LoginProvider({ children }) {
-  const [connect, setConnect] = useState(false);
-  const getUsers = () => JSON.parse(localStorage.getItem("users") ?? "[]");
+function LoginProvider({ children, apiService }) {
   const navigate = useNavigate();
+  const givenData = useLoaderData();
+  const [user, setUser] = useState(givenData?.preloadUser?.data);
 
-  const login = (credentials) => {
-    const allUsers = getUsers();
-    const checkUser = allUsers.find(
-      (user) =>
-        user.firstName === credentials.firstName &&
-        user.password === credentials.password
-    );
-    if (!checkUser) {
-      alert("Identifiants incorrects !");
-    } else {
-      alert(`Content de vous revoir ${credentials.firstName}`);
-      setConnect(checkUser);
+  const login = useCallback(async (credentials) => {
+    try {
+      const data = await apiService.post("/api/login/", credentials);
+      localStorage.setItem("token", data.token);
 
+      apiService.setToken(data.token);
+
+      const result = await apiService.get("/api/users/me");
+
+      alert(`Coucou ${result.data.email}`);
+      setUser(result.data);
       return navigate("/");
+    } catch (err) {
+      console.error(err);
+      alert("Login failed. Please check your credentials.");
     }
     return null;
-  };
+  }, []);
 
-  const context = useMemo(() => ({ login, connect, setConnect }), [connect]);
+  const context = useMemo(() => ({ login, user }), [login, user]);
 
   return (
     <loginContext.Provider value={context}>{children}</loginContext.Provider>
@@ -36,6 +44,7 @@ function LoginProvider({ children }) {
 
 LoginProvider.propTypes = {
   children: PropTypes.node.isRequired,
+  apiService: PropTypes.instanceOf(ApiService).isRequired,
 };
 
 export default LoginProvider;

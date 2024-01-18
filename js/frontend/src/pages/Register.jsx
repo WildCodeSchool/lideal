@@ -1,12 +1,44 @@
+import { useState } from "react";
 import { useUserContext } from "../context/UserContext";
 
 export default function Register() {
-  const { formData, saveUserToLocalStorage, updateUser } = useUserContext();
+  const { register } = useUserContext();
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    password: "",
+    email: "",
+    phone: "",
+    dtn: "",
+  });
+
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setFormData((prevFormData) => ({
+  //     ...prevFormData,
+  //     [name]: value,
+  //   }));
+  // };
+
+  const updateUser = (field, value) => {
+    setFormData({ ...formData, [field]: value });
+  };
+
+  // const saveUserToLocalStorage = () => {
+  //   if (!localStorage.getItem("users")) {
+  //     localStorage.setItem("users", JSON.stringify([]));
+  //   }
+  //   const users = JSON.parse(localStorage.getItem("users"));
+  //   users.push(formData);
+  //   localStorage.setItem("users", JSON.stringify(users));
+  //   return Navigate("/");
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    saveUserToLocalStorage();
     updateUser();
+    register(formData);
   };
 
   return (

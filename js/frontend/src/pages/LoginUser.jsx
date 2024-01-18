@@ -7,7 +7,7 @@ function LoginUser() {
   const { login } = useLogin();
 
   const [formValue, setFormValue] = useState({
-    firstName: "",
+    email: "",
     password: "",
   });
 
@@ -25,13 +25,13 @@ function LoginUser() {
       <h1>Connexion</h1>
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="firstName" className="labelLogin">
-            Prénom :
+          <label htmlFor="email" className="labelLogin">
+            Email :
           </label>
           <div className="inputLogin">
             <input
               value={formValue.firstName}
-              name="firstName"
+              name="email"
               type="text"
               id="inputLogin"
               onChange={onChange}
