@@ -1,9 +1,11 @@
 import { createContext, useContext, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const UserContext = createContext();
 
 export default function UserContextProvider({ children }) {
+  const navigate = useNavigate();
   const [connect, setConnect] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -33,6 +35,7 @@ export default function UserContextProvider({ children }) {
     const users = JSON.parse(localStorage.getItem("users"));
     users.push(formData);
     localStorage.setItem("users", JSON.stringify(users));
+    return navigate("/");
   };
 
   const contextValue = useMemo(
