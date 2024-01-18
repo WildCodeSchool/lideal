@@ -58,19 +58,19 @@ a {
   text-decoration: none;
 }
 
+input {
+  border: none;
+}
+input:focus-visible {
+  outline: none;
+}
+
 button {
   display: block;
   background-color: transparent;
   border: none;
   text-align: left;
   cursor: pointer;
-}
-
-input {
-  border: none;
-}
-input:focus-visible {
-  outline: none;
 }
 
 .t-center {
@@ -260,6 +260,26 @@ img {
   width: 100vw;
 }
 
+.button {
+  padding: 10px 15px;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+.button.bg-black {
+  border: 3px solid black;
+}
+.button.bg-black:hover {
+  background-color: white;
+  color: black;
+}
+.button.bg-white {
+  border: 3px solid white;
+}
+.button.bg-white:hover {
+  background-color: black;
+  color: white;
+}
+
 .radius {
   border-radius: 50%;
 }
@@ -336,6 +356,7 @@ img {
   top: 50px;
   transform: translate(100%);
   transition: all 0.3s;
+  z-index: 100;
 }
 .navbar ul {
   text-align: center;
@@ -397,7 +418,7 @@ img {
   padding-block: 20px;
 }
 .point-container .card {
-  padding: 10px;
+  padding: 15px;
   gap: 5px;
 }
 .point-container .shop {
@@ -414,6 +435,18 @@ img {
 }
 .point-container .reduc .line-offer img {
   width: 80px;
+}
+
+.promo {
+  position: relative;
+}
+.promo figcaption {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  line-height: 46px;
 }
 
 .inputLogin {

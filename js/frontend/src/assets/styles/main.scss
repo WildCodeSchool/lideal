@@ -65,18 +65,18 @@ a {
   color: inherit;
   text-decoration: none;
 }
+input {
+  border: none;
+  &:focus-visible {
+    outline: none;
+  }
+}
 button {
   display: block;
   background-color: transparent;
   border: none;
   text-align: left;
   cursor: pointer;
-}
-input {
-  border: none;
-  &:focus-visible {
-    outline: none;
-  }
 }
 
 //// General
@@ -247,6 +247,29 @@ img {
 
 // buttons
 
+.button {
+  padding: 10px 15px;
+  transition: all 0.3s;
+  font-size: 18px;
+
+  &.bg-black {
+    border: 3px solid black;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+  &.bg-white {
+    border: 3px solid white;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
 // borders
 .radius {
   border-radius: 50%;
@@ -378,6 +401,7 @@ $burger-button-height: 20px;
     top: $navbar-height;
     transform: translate(100%);
     transition: all 0.3s;
+    z-index: 100;
   }
 
   ul {
@@ -404,6 +428,19 @@ $burger-button-height: 20px;
   .description {
     margin: 0 30px;
 
+// Points
+
+.point-container {
+  .point-part {
+    .points-container {
+      width: 250px;
+      aspect-ratio: 1 / 1;
+
+      h1,
+      h2 {
+        width: 100%;
+      }
+    }
     h1 {
       padding-top: 30px;
     }
@@ -461,7 +498,7 @@ $burger-button-height: 20px;
   }
 
   .card {
-    padding: 10px;
+    padding: 15px;
     gap: 5px;
   }
 
@@ -484,6 +521,19 @@ $burger-button-height: 20px;
       }
     }
   }
+}
+
+.promo {
+    position: relative;
+
+    figcaption {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        line-height: 46px;
+    }
 }
 
 // Login
