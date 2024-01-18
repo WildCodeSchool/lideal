@@ -59,6 +59,7 @@ html body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 a {
   color: inherit;
@@ -427,7 +428,8 @@ $burger-button-height: 20px;
 .home-container {
   .description {
     margin: 0 30px;
-
+  }
+}
 // Points
 
 .point-container {
@@ -524,16 +526,16 @@ $burger-button-height: 20px;
 }
 
 .promo {
-    position: relative;
+  position: relative;
 
-    figcaption {
-        position: absolute;
-        color: white;
-        top: 0;
-        left: 0;
-        font-size: 20px;
-        line-height: 46px;
-    }
+  figcaption {
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    line-height: 46px;
+  }
 }
 
 // Login

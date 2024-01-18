@@ -51,6 +51,7 @@ html body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 a {
@@ -304,6 +305,7 @@ img {
   position: relative;
   height: 50px;
   background-color: white;
+  z-index: 100;
 }
 .navbar #logo {
   width: 130px;
@@ -374,35 +376,44 @@ img {
 .home-container .description {
   margin: 0 30px;
 }
-.home-container .description h1 {
+
+.point-container .point-part .points-container {
+  width: 250px;
+  aspect-ratio: 1/1;
+}
+.point-container .point-part .points-container h1,
+.point-container .point-part .points-container h2 {
+  width: 100%;
+}
+.point-container .point-part h1 {
   padding-top: 30px;
 }
-.home-container .description h2 {
+.point-container .point-part h2 {
   padding-top: 30px;
 }
-.home-container .home-card-title {
+.point-container .home-card-title {
   display: flex;
 }
-.home-container .def {
+.point-container .def {
   width: 300px;
   height: 300px;
   margin: 0 auto;
   border-radius: 100%;
   margin-top: 40px;
 }
-.home-container .def h2 {
+.point-container .def h2 {
   padding-top: 60px;
   text-align: center;
 }
-.home-container .def p {
+.point-container .def p {
   text-align: center;
 }
-.home-container .logo-picture {
+.point-container .logo-picture {
   text-align: end;
   padding-top: 30px;
   padding-right: 30px;
 }
-.home-container .logo-picture img {
+.point-container .logo-picture img {
   width: 15%;
 }
 

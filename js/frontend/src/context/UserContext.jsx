@@ -23,12 +23,19 @@ export default function UserContextProvider({ children, apiService }) {
     }
   };
 
+  const handlelogout = async () => {
+    await setUser(null);
+    localStorage.removeItem("token");
+    navigate("/");
+  };
+
   const contextValue = useMemo(
     () => ({
       connect,
       setConnect,
       register,
       user,
+      handlelogout,
     }),
     [connect]
   );
