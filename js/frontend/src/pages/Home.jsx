@@ -55,10 +55,10 @@ function Home() {
         <h3>Prochaines connexions</h3>
         <ol>
           <li>
-            1.Scannez votre ticket de caisse aprés vos achats L'Oréal en points
+            1.Scannez votre ticket de caisse après vos achats L'Oréal en points
             de vente
           </li>
-          <li>2.Consultez de solde de vos GreenPoints réactualisés</li>
+          <li>2.Consultez de solde de vos GreenPoints réactualisé</li>
           <li>3.Génerez votre code réduction</li>
           <li>
             <a href="https://www.loreal-paris.fr/" target="_blank">
