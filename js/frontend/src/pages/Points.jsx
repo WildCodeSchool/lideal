@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Points() {
   /* const [productData, setProductData] = useState({});
@@ -19,6 +20,8 @@ function Points() {
 
     fetchDataProduct();
   }, []); */
+
+  const [showPopup, setShowPopup] = useState(false);
 
   const products = [
     {
@@ -144,6 +147,9 @@ function Points() {
         <button
           className="button mi-auto radius-10 pb-10 bg-black mt-30"
           type="button"
+          onClick={() => {
+            setShowPopup(!showPopup);
+          }}
         >
           Générer mon code
         </button>
@@ -162,6 +168,32 @@ function Points() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className={`popup-container${showPopup ? " active" : ""}`}>
+        <div className="popup-infos d-flex d-flex-column d-flex-space-around">
+          <div>
+            <h4>Voici votre code:</h4>
+            <h5>lideal10</h5>
+          </div>
+          <a
+            href="https://www.loreal-paris.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="button bg-black mb-20" type="button">
+              Utiliser sur le site
+            </button>
+          </a>
+          <button
+            className="button mi-auto radius-10 bg-black"
+            type="button"
+            onClick={() => {
+              setShowPopup(!showPopup);
+            }}
+          >
+            Retour
+          </button>
         </div>
       </div>
     </div>

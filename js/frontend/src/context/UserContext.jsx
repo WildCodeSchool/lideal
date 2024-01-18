@@ -1,11 +1,12 @@
 import { createContext, useContext, useMemo, useState } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import ApiService from "../services/api.services";
+import { useDataContext } from "./DataContext";
 
 const UserContext = createContext();
 
-export default function UserContextProvider({ children, apiService }) {
+export default function UserContextProvider({ children }) {
+  const { apiService } = useDataContext();
   const navigate = useNavigate();
   const [connect, setConnect] = useState(false);
   const givenData = useLoaderData();
@@ -51,5 +52,4 @@ export const useUserContext = () => useContext(UserContext);
 
 UserContextProvider.propTypes = {
   children: PropTypes.node.isRequired,
-  apiService: PropTypes.instanceOf(ApiService).isRequired,
 };

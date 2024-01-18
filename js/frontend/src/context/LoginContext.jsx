@@ -1,11 +1,12 @@
 import { createContext, useContext, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import ApiService from "../services/api.services";
+import { useDataContext } from "./DataContext";
 
 const loginContext = createContext();
 
-function LoginProvider({ children, apiService }) {
+function LoginProvider({ children }) {
+  const { apiService } = useDataContext();
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
@@ -23,7 +24,7 @@ function LoginProvider({ children, apiService }) {
       localStorage.setItem("token", data.token);
       apiService.setToken(data.token);
       const result = await apiService.get("http://localhost:3310/api/users/me");
-      setUser(result.data); // You may want to set the user to a default value or null here
+      setUser(result.data);
       return navigate("/");
     } catch (err) {
       console.error(err);
@@ -44,7 +45,6 @@ function LoginProvider({ children, apiService }) {
 
 LoginProvider.propTypes = {
   children: PropTypes.node.isRequired,
-  apiService: PropTypes.instanceOf(ApiService).isRequired,
 };
 
 export default LoginProvider;
