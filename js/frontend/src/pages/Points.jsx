@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function Points() {
-  const [productData, setProductData] = useState({});
+  const [productData, setProductData] = useState([]);
 
   useEffect(() => {
     const fetchDataProduct = async () => {
@@ -22,38 +22,38 @@ function Points() {
 
   const [showPopup, setShowPopup] = useState(false);
 
-  /* const products = [
-    {
-      id: 1,
-      name: "Beaume",
-      img: "./src/assets/lorealproduct.jpg",
-      price: 15,
-    },
-    {
-      id: 2,
-      name: "Rouge",
-      img: "./src/assets/correcteur.jpg",
-      price: 10,
-    },
-    {
-      id: 3,
-      name: "Creme",
-      img: "./src/assets/lorealproduct.jpg",
-      price: 30,
-    },
-    {
-      id: 4,
-      name: "Pipe",
-      img: "./src/assets/lorealproduct.jpg",
-      price: 50,
-    },
-    {
-      id: 5,
-      name: "Creamy",
-      img: "./src/assets/lorealproduct.jpg",
-      price: 30,
-    },
-  ]; */
+  // const products = [
+  //   {
+  //     id: 1,
+  //     name: "Beaume",
+  //     img: "./src/assets/lorealproduct.jpg",
+  //     price: 15,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Rouge",
+  //     img: "./src/assets/correcteur.jpg",
+  //     price: 10,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Creme",
+  //     img: "./src/assets/lorealproduct.jpg",
+  //     price: 30,
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Pipe",
+  //     img: "./src/assets/lorealproduct.jpg",
+  //     price: 50,
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Creamy",
+  //     img: "./src/assets/lorealproduct.jpg",
+  //     price: 30,
+  //   },
+  // ];
 
   const shops = [
     {
@@ -106,12 +106,12 @@ function Points() {
               >
                 <a
                   className="d-flex d-flex-space-between d-flex-column h-100"
-                  href="#"
+                  href={data.pproduct_link}
                 >
-                  <img className="mb-20" src={data.img} alt="product" />
+                  <img className="mb-20" src={data.product_img} alt="product" />
                   <figure className="t-center mb-10">
                     <h3>
-                      {data.product_name} - {data.price}€
+                      {data.product_name} - {data.product_new_price}€
                     </h3>
                   </figure>
                 </a>
