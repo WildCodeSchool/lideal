@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import App from "./App";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Points from "./pages/Points";
 
 import LoginUser from "./pages/LoginUser";
 
@@ -18,8 +19,6 @@ import Picture from "./pages/Picture";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-
     element: (
       <DataContextProvider>
         <UserContextProvider>
@@ -49,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/picture",
         element: <Picture />,
+      },
+      {
+        path: "/points",
+        element: <Points />,
       },
     ],
   },
