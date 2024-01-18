@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import iconePhoto from "../assets/iconePictureBlack.svg";
+import { useUserContext } from "../context/UserContext";
 
 function Home() {
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const { user } = useUserContext();
   const navigate = useNavigate();
 
   const handleIconClick = () => {
-    if (isUserLoggedIn) {
+    if (user) {
       navigate("/picture");
     } else {
       navigate("/register");

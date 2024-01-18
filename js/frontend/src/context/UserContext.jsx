@@ -25,10 +25,7 @@ export default function UserContextProvider({ children }) {
   };
 
   const handleLogout = () => {
-    localStorage.setItem("token", null);
-
-    apiService.setToken(null);
-    setUser(null);
+    localStorage.removeItem("token");
     alert(`Déconnexion réussie`);
     return navigate("/");
   };
