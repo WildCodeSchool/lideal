@@ -38,16 +38,19 @@ function Home() {
       </div>
       <div className="contain">
         <p className="mb-30">
-          Découvrez une toute nouvelle façon de vivre l'expérience L'Oréal avec
-          L'idéal de L'Oréal. En cumulant des points à chaque achat dans l'un de
-          nos point de vos produits préférés, vous ouvrez la porte à des
-          réductions exclusives sur vos futurs achats en ligne.
+          L'Idéal Team vous propose une toute nouvelle façon de vivre
+          l'expérience L'Oréal avec "L'idéal de L'Oréal". Cumulez nos Eco
+          Points, et réduisez votre impact environnemental en vous faisant
+          livrer vos produits préférés L'Oréal dans vos points de vente à côté
+          de chez vous.
         </p>
         <p className="mb-30">
-          L'Idéal Team croit en la beauté avec un but. Une partie des points que
-          vous cumulez sera reversée à des œuvres caritatives sélectionnées par
-          L'Oréal. Ainsi, chaque achat contribue à rendre le monde plus beau, à
-          l'intérieur comme à l'extérieur.
+          La réduction de l'empreinte carbone est l'une de nos missions
+          principales, et ensemble, nous avons la certitude d'aller encore plus
+          loin vers nos valeurs communes. En cumulant nos Eco points, vous
+          faites, non seulement un geste responsable pour la planète, mais vous
+          vous ouvrez aussi la porte à des réductions exclusives sur vos futurs
+          achats en ligne!
         </p>
       </div>
       <div className="img-max has-three-children">
@@ -66,7 +69,7 @@ function Home() {
           <li className="mb-10">
             1. Créez-vous un compte avec un cadeau de 100 points
           </li>
-          <li className="mb-10">2. Accédez à vos GreenPoints</li>
+          <li className="mb-10">2. Accédez à vos Eco Points</li>
           <li className="mb-10">3. Génerez votre code réduction</li>
           <li className="mb-10">
             <a href="https://www.loreal-paris.fr/" target="_blank">
@@ -87,7 +90,7 @@ function Home() {
             de vente
           </li>
           <li className="mb-10">
-            2. Consultez de solde de vos GreenPoints réactualisés
+            2. Consultez de solde de vos Eco Points réactualisés
           </li>
           <li className="mb-10">3. Génerez votre code réduction</li>
           <li className="mb-10">
