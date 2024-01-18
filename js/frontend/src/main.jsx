@@ -11,15 +11,28 @@ import Points from "./pages/Points";
 import LoginUser from "./pages/LoginUser";
 
 import DataContextProvider from "./context/DataContext";
+import LoginProvider from "./context/LoginContext";
+import { UserContextProvider } from "./context/UserContext";
+import Home from "./pages/Home";
+import MyProfile from "./pages/MyProfile";
+import Picture from "./pages/Picture";
 
 const router = createBrowserRouter([
   {
     element: (
       <DataContextProvider>
-        <App />
+        <UserContextProvider>
+          <LoginProvider>
+            <App />
+          </LoginProvider>
+        </UserContextProvider>
       </DataContextProvider>
     ),
     children: [
+      {
+        path: "/home",
+        element: <Home />,
+      },
       {
         path: "/loginuser",
         element: <LoginUser />,
@@ -29,8 +42,12 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "/points",
-        element: <Points />,
+        path: "/myprofile",
+        element: <MyProfile />,
+      },
+      {
+        path: "/picture",
+        element: <Picture />,
       },
     ],
   },

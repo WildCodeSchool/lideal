@@ -1,22 +1,61 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/Button";
+import { useLogin } from "../context/LoginContext";
 
 function LoginUser() {
+  const { login } = useLogin();
+
+  const [formValue, setFormValue] = useState({
+    firstName: "",
+    password: "",
+  });
+
+  const onChange = (e) => {
+    setFormValue({ ...formValue, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    login(formValue);
+  };
+
   return (
-    <div>
+    <div className="d-flex d-flex-column ml-3 container">
       <h1>Connexion</h1>
       <div>
-        <form action="GET">
-          <label htmlFor="identifiant">Identifiant</label>
-          <input type="text" />
-          <label htmlFor="password">Mot de passe</label>
-          <input type="password" />
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="firstName" className="labelLogin">
+            Prénom :
+          </label>
+          <div className="inputLogin">
+            <input
+              value={formValue.firstName}
+              name="firstName"
+              type="text"
+              id="inputLogin"
+              onChange={onChange}
+            />
+          </div>
+          <label htmlFor="password" className="labelLogin">
+            Mot de passe :
+          </label>
+          <div className="inputLogin">
+            <input
+              value={formValue.password}
+              name="password"
+              type="password"
+              id="inputLogin"
+              onChange={onChange}
+            />
+          </div>
+          <Button type="submit" className="mt-30">
+            Valider
+          </Button>
         </form>
       </div>
-      <Button>Valider </Button>
-      <Link to="/connexion">
-        <p className="mb-10">
+      <Link to="/register">
+        <p className="mt-40">
           Vous n'avez pas de compte ?<br />
           Inscrivez-vous ici.
         </p>

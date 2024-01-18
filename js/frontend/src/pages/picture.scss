@@ -1,0 +1,24 @@
+.picture-container {
+
+height: 100vh;
+padding-top: 50px;
+
+.picture {
+  margin: 0 auto;
+  width: 90%;
+  height: 85%;
+  background-color: white;
+  border-radius: 6%;
+}
+.logo-picture {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 33px);
+  margin-bottom: 20px;
+
+
+}
+}
