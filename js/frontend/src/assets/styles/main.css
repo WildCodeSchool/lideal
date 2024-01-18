@@ -51,6 +51,7 @@ html body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 a {

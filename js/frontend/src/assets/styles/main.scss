@@ -59,6 +59,7 @@ html body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 a {
   color: inherit;
@@ -474,7 +475,6 @@ $burger-button-height: 20px;
     margin: 0 30px;
   }
 }
-
 // Points
 
 .point-container {
