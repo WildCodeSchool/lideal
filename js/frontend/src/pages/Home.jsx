@@ -17,9 +17,9 @@ function Home() {
   return (
     <div className="d-flex d-flex-column bg-black">
       <div className="home-card-title">
-        <h1 className="home-title">L'idéal de </h1>
-        <img src="./src/assets/loreal-logos-idZWwLS3l4.svg" id="logo" />
+        <h1 className="home-title">L'idéal de L'Oréal</h1>
       </div>
+      <h2>"Feel green, Feel beauty, soyez l'Idéal de L'Oréal"</h2>
       <div className="description">
         <h2>En quelques mots...</h2>
         <p>
@@ -38,12 +38,35 @@ function Home() {
       </div>
       <div className="def bg-white">
         <h2>Comment ça marche?</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
-          odio similique, earum dolorum, explicabo corporis eius, culpa sapiente
-          dolorem enim aut qui eaque nobis consequuntur nemo eveniet ullam
-          temporibus!
-        </p>
+        <h3>Premiére connexion</h3>
+        <ol>
+          <li>1.Céez-vous un compte avec un Bonus de 100 points</li>
+          <li>2.Accédez à vos GreenPoints</li>
+          <li>3.Génerez votre code réduction</li>
+          <li>
+            4.Allez sur le site https://www.loreal-paris.fr/ pour profiter de
+            vos points
+          </li>
+          <li>
+            5.Choisissez votre point de retrait le plus proche de chez vous
+          </li>
+        </ol>
+        <h3>Prochaines connexions</h3>
+        <ol>
+          <li>
+            1.Scannez votre ticket de caisse aprés vos achats L'Oréal en points
+            de vente
+          </li>
+          <li>2.Consultez de solde de vos GreenPoints réactualisés</li>
+          <li>3.Génerez votre code réduction</li>
+          <li>
+            4.Allez sur le site https://www.loreal-paris.fr/ pour profiter de
+            vos points
+          </li>
+          <li>
+            5.Choisissez votre point de retrait le plus proche de chez vous
+          </li>
+        </ol>
         <h2>Avantages L'Idéal</h2>
         <ul>
           <ol>
