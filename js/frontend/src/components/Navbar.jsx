@@ -14,12 +14,24 @@ export default function () {
       </button>
       <div className="burger-menu">
         <ul>
-          <li>Accueil</li>
-          <li>Profil</li>
-          <li>Green Points</li>
-          <li>Scan</li>
-          <li>Connexion</li>
-          <li>Inscription</li>
+          <li>
+            <a href="/">Accueil</a>
+          </li>
+          <li>
+            <a href="/myprofile">Profil</a>
+          </li>
+          <li>
+            <a href="#">Green Points</a>
+          </li>
+          <li>
+            <a href="/picture">Scan</a>
+          </li>
+          <li>
+            <a href="/loginuser">Connexion</a>
+          </li>
+          <li>
+            <a href="/register">Inscription</a>
+          </li>
         </ul>
       </div>
     </div>
