@@ -25,8 +25,8 @@ function Home() {
         <p>
           {" "}
           Découvrez une toute nouvelle façon de vivre l'expérience L'Oréal avec
-          nL'idéal de L'Oréal. En cumulant des points à chaque achat dans l'un
-          de nos point de vos produits préférés, vous ouvrez la porte à des
+          L'idéal de L'Oréal. En cumulant des points à chaque achat dans l'un de
+          nos point de vos produits préférés, vous ouvrez la porte à des
           réductions exclusives sur vos futurs achats en ligne.
         </p>
         <p>
@@ -38,14 +38,15 @@ function Home() {
       </div>
       <div className="def bg-white">
         <h2>Comment ça marche?</h2>
-        <h3>Premiére connexion</h3>
+        <h3>Première connexion</h3>
         <ol>
-          <li>1.Céez-vous un compte avec un Bonus de 100 points</li>
+          <li>1.Créez-vous un compte avec un cadeau de 100 points</li>
           <li>2.Accédez à vos GreenPoints</li>
           <li>3.Génerez votre code réduction</li>
           <li>
-            4.Allez sur le site https://www.loreal-paris.fr/ pour profiter de
-            vos points
+            <a href="https://www.loreal-paris.fr/" target="_blank">
+              4. Allez sur le site loreal-paris.fr/ pour profiter de vos points
+            </a>
           </li>
           <li>
             5.Choisissez votre point de retrait le plus proche de chez vous
@@ -60,8 +61,9 @@ function Home() {
           <li>2.Consultez de solde de vos GreenPoints réactualisés</li>
           <li>3.Génerez votre code réduction</li>
           <li>
-            4.Allez sur le site https://www.loreal-paris.fr/ pour profiter de
-            vos points
+            <a href="https://www.loreal-paris.fr/" target="_blank">
+              4. Allez sur le site loreal-paris.fr/ pour profiter de vos points
+            </a>
           </li>
           <li>
             5.Choisissez votre point de retrait le plus proche de chez vous
