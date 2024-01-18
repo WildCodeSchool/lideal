@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./home.scss";
 import iconePhoto from "../assets/iconePictureBlack.svg";
 
 function Home() {
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  const handleIconClick = () => {
+    if (isUserLoggedIn) {
+      navigate("/picture");
+    } else {
+      navigate("/register");
+    }
+  };
+
   return (
     <div className="home-container bg-black">
       <div className="description">
@@ -28,7 +40,7 @@ function Home() {
         </p>
       </div>
       <div className="logo-picture">
-        <img src={iconePhoto} alt="iconePhoto" />
+        <img src={iconePhoto} alt="iconePhoto" onClick={handleIconClick} />
       </div>
     </div>
   );
