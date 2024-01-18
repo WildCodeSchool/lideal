@@ -52,14 +52,17 @@ $fonts-path: "../fonts";
   list-style: none;
   font-family: "Helvetica";
 }
-body {
+html {
+    overflow-x: hidden;
+}
+html body {
   background-color: black;
   color: white;
   overflow-x: hidden;
 }
 a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 button {
   display: block;
@@ -101,10 +104,25 @@ p {
 .tiny-text {
   font-size: 10px;
 }
+img {
+  width: 100%;
+  height: auto;
+}
+
+// backgrounds
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+.bg-white {
+  background-color: white;
+  color: black;
+}
 
 //// Spacing / Margins
 
-.container {
+.contain {
   width: 100%;
   max-width: 1224px;
   margin-inline: auto;
@@ -229,10 +247,58 @@ p {
 // buttons
 
 // borders
+.radius {
+    border-radius: 50%;
+}
+.radius-10 {
+  border-radius: 10px;
+}
 
 // shadows
 
 // blocks
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    margin: 0;
+
+    img {
+        width: 180px;
+        height: auto;
+    }
+
+//  width: 100%;
+//  overflow-x: auto;
+//  padding-block: 20px;
+//  gap: 50px;
+//  display: flex;
+
+//   .card {
+//     // flex: 1;
+//   }
+
+//   &.has-little-cards {
+
+//     .card {
+//       width: 100px;
+//     }
+//   }
+//   &.has-medium-cards {
+
+//     .card {
+//       width: 200px;
+//     }
+//   }
+//   &.has-big-cards {
+
+//     .card {
+//       width: 300px;
+//     }
+//   }
+}
 
 // forms
 
@@ -334,6 +400,54 @@ $burger-button-height: 20px;
 //// Pages
 
 // Home
+
+// Points 
+
+.point-container {
+
+    .point-part {
+      
+      .points-container {
+        width: 250px;
+        aspect-ratio: 1 / 1;
+
+        h1, h2 {
+            width: 100%;
+        }
+      }
+    }
+  
+    .favorite-part {
+      padding-block: 20px;
+    }
+  
+    .card {
+      padding: 10px;
+      gap: 5px;
+    }
+  
+    .shop {
+      padding-top: 20px;
+  
+    }
+  
+    .reduc {
+      padding-top: 20px;
+  
+      .line-offer {
+        gap: 40px;
+  
+        h3 {
+          align-self: center;
+        }
+  
+        img {
+          width: 80px;
+        }
+      }
+    }
+  }
+  
 
 // Login
 .inputLogin {
