@@ -48,9 +48,13 @@
   box-shadow: 1px 2px 1px rgb(156, 156, 156);
 }
 .picture-container .logo-picture {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   position: absolute;
   bottom: 0;
   left: calc(50% - 33px);

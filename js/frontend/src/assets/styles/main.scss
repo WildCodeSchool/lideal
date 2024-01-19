@@ -156,7 +156,7 @@ img {
 }
 
 hr {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 // backgrounds
 
@@ -187,8 +187,11 @@ hr {
   max-width: 2800px;
 }
 
-
 // slider
+
+.mbl-0 {
+  margin-block: 0;
+}
 
 .mi-auto {
   margin-inline: auto;
@@ -207,7 +210,7 @@ hr {
 }
 
 .mt-bk {
-    margin-top: -4px;
+  margin-top: -4px;
 }
 .mt-10 {
   margin-top: 10px;
@@ -248,35 +251,35 @@ hr {
 }
 
 .pt-10 {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 .pt-20 {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .pt-30 {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 .pt-40 {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 .pt-50 {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .pb-10 {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 .pb-20 {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 .pb-30 {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 .pb-40 {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 .pb-50 {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 //// Displays
@@ -329,23 +332,22 @@ hr {
   width: 100vw;
 }
 
-// lists 
+// lists
 
-ol, ul {
-    padding-inline: 25px 10px;
+ol,
+ul {
+  padding-inline: 25px 10px;
 }
 
 .point-list {
-
-    li {
-
-        &:before {
-            content: "•";
-            display: inline-block;
-            margin-right: 6px;
-            vertical-align: text-bottom;
-        }
+  li {
+    &:before {
+      content: "•";
+      display: inline-block;
+      margin-right: 6px;
+      vertical-align: text-bottom;
     }
+  }
 }
 
 // buttons
@@ -381,15 +383,15 @@ ol, ul {
   border-radius: 10px;
 }
 
-// video 
+// video
 
 .video-max {
-    width: 100%;
-    aspect-ratio: 16 / 9;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 
-    video {
-        width: 100%;
-    }
+  video {
+    width: 100%;
+  }
 }
 
 // shadows
@@ -408,6 +410,12 @@ ol, ul {
     height: auto;
   }
 
+  h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+  }
   //  width: 100%;
   //  overflow-x: auto;
   //  padding-block: 20px;
@@ -441,16 +449,15 @@ ol, ul {
 // forms
 
 input {
-    padding: 7px 10px;
-    width: 400px;
-    max-width: 100%;
+  padding: 7px 10px;
+  width: 400px;
+  max-width: 100%;
 }
 
 form {
-
-    .button {
-        padding: 0px 14px;
-    }
+  .button {
+    padding: 0px 14px;
+  }
 }
 
 ///// Menu
@@ -559,8 +566,8 @@ $burger-button-height: 20px;
 }
 
 .home-title {
-    font-size: 35px;
-    margin: 0;
+  font-size: 35px;
+  margin: 0;
 }
 
 // Points
@@ -598,17 +605,15 @@ $burger-button-height: 20px;
   }
 }
 
-
 .logo-picture {
-
-    div {
-        padding: 10px;
-    }
-    img {
-        filter: invert(100%);
-        width: 40px;
-    }
+  div {
+    padding: 10px;
   }
+  img {
+    filter: invert(100%);
+    width: 40px;
+  }
+}
 
 // Points
 
@@ -670,18 +675,31 @@ $burger-button-height: 20px;
 
 // Profile
 
+.profile {
+  strong,
+  label {
+    display: inline-block;
+  }
+  strong {
+    width: 100px;
+  }
+  label {
+    width: 190px;
+  }
+}
+
 // GP
 
 // Picture
 
 .has-three-children {
-    display: flex;
+  display: flex;
 
-    & > * {
-        width: 33.3333%;
-        object-fit: cover;
-        object-position: center;
-    }
+  & > * {
+    width: 33.3333%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 //// Responsive

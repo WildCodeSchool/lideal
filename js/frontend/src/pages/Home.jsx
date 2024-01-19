@@ -87,7 +87,8 @@ function Home() {
         <ol className="mb-30">
           <li className="mb-10">
             1. Scannez votre ticket de caisse aprés vos achats L'Oréal en points
-            de vente
+            de vente (salons, boutiques cosmétiques, pharmacies, grandes
+            distributions)
           </li>
           <li className="mb-10">
             2. Consultez de solde de vos Eco Points réactualisés
