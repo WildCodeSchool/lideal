@@ -2,13 +2,14 @@ import { createContext, useContext, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useDataContext } from "./DataContext";
+import { useUserContext } from "./UserContext";
 
 const loginContext = createContext();
 
 function LoginProvider({ children }) {
   const { apiService } = useDataContext();
+  const { user, setUser } = useUserContext();
   const navigate = useNavigate();
-  const [user, setUser] = useState(null);
 
   const [formValue, setFormValue] = useState({
     email: "",

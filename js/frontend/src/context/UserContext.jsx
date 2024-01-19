@@ -36,9 +36,10 @@ export default function UserContextProvider({ children }) {
       setConnect,
       register,
       user,
+      setUser,
       handleLogout,
     }),
-    [connect]
+    [connect, setConnect, register, user, setUser, handleLogout]
   );
 
   return (
