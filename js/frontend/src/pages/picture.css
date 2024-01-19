@@ -1,0 +1,75 @@
+.picture-container {
+  padding-top: 20px;
+}
+.picture-container .picture {
+  margin: 0 auto;
+  width: 90%;
+  height: 600px;
+  background-color: white;
+  border-radius: 6%;
+  position: relative;
+}
+.picture-container .picture video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+.picture-container .picture video.active {
+  z-index: 90;
+}
+.picture-container .picture .btn-autorisation {
+  display: flex;
+  padding-top: 280px;
+  padding-left: 38%;
+}
+.picture-container .picture .btn-autorisation button {
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 1px 2px 1px rgb(156, 156, 156);
+}
+.picture-container .btn-send {
+  display: flex;
+  padding-top: 30px;
+  padding-left: 38%;
+}
+.picture-container .btn-send button {
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 1px 2px 1px rgb(156, 156, 156);
+}
+.picture-container .logo-picture {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 33px);
+  margin-bottom: 20px;
+}
+.picture-container .photo-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+.picture-container .photo-preview img {
+  width: 100%;
+}/*# sourceMappingURL=picture.css.map */

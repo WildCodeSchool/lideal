@@ -1,4 +1,5 @@
 // Load the express module to create a web application
+// const path = require("node:path");
 
 const express = require("express");
 
@@ -27,19 +28,16 @@ app.use(cors());
 // 4. Be sure to only have URLs in the array with domains from which you want to allow requests.
 // For example: ["http://mysite.com", "http://another-domain.com"]
 
-/*
 const cors = require("cors");
 
 app.use(
   cors({
     origin: [
       process.env.FRONTEND_URL, // keep this one, after checking the value in `backend/.env`
-      "http://mysite.com",
-      "http://another-domain.com",
-    ]
+      "http://localhost:3000",
+    ],
   })
 );
-*/
 
 /* ************************************************************************* */
 
