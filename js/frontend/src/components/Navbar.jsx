@@ -14,6 +14,7 @@ export default function NavBar() {
         alt="logo"
       />
       <button
+        type="button"
         onClick={() => setNavbar(!navbar)}
         className={`burger-button${navbar ? " active" : ""}`}
       >
@@ -33,29 +34,22 @@ export default function NavBar() {
           <li>
             <a href="/picture">Scan</a>
           </li>
-          <li>
-            <div className="btn-nav">
-              {user ? (
-                <div>
-                  <Link to="/" onClick={handleLogout}>
-                    Se déconnecter
-                  </Link>
-                </div>
-              ) : (
-                <>
-                  <a href="/loginuser">
-                    <span className="navbar-link">Se connecter</span>
-                  </a>
-                  <br />
-                  <br />
-                  <br />
-                  <a href="/register">
-                    <span className="navbar-link">S'inscrire</span>
-                  </a>
-                </>
-              )}
-            </div>
-          </li>
+          {user ? (
+            <li>
+              <Link to="/" onClick={handleLogout}>
+                Se déconnecter
+              </Link>
+            </li>
+          ) : (
+            <>
+              <li>
+                <a href="/loginuser">Se connecter</a>
+              </li>
+              <li>
+                <a href="/register">S'inscrire</a>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </div>
