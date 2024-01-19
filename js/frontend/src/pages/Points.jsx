@@ -172,8 +172,8 @@ function Points() {
       <div className={`popup-container${showPopup ? " active" : ""}`}>
         <div className="popup-infos d-flex d-flex-column d-flex-space-around">
           <div>
-            <h4>Voici votre code:</h4>
-            <h5>lideal10</h5>
+            <h2 className="t-center mb-20">Voici votre code:</h2>
+            <h2 className="t-center pt-10 pb-10 bg-black">lideal10</h2>
           </div>
           <a
             href="https://www.loreal-paris.fr/"
